@@ -1,15 +1,21 @@
 const Projectdata=[
     {
-    title:"PicUploader",
-    description:"This is website i have built using html,css and javascript. I have used nodejs and mongodb for the backend part. This webpage helps you register yourself later login and upload pics. It provides download facility too. Noo more fever of losing your precious pictures."
-},
-{
-    title:"Recipe webpage",
-    description:"TBD"
-},
-{
+    key:'1',
     title:"Cadenza",
-    description:"This is webpage which helps you see top 50 songs and provides your links to listen to them."
+    description:"I had the most fun while developing this webpage its similar to spotify but with few lesser features. I developed this webpage using HTML,CSS,Javascript,handlebars,Nodejs and Sql. This webpage allows the admin to add and delete songs as well. Users can listen to songs get the lyrics based on top charts or artists available.",
+    Technologies_Used:['HTML','CSS','Javascript','Handlebars','NodeJS','ExpressJS','SQL']
+},
+{
+    key:'2',
+    title:"Foodism.com",
+    description:"Foodism.com is webpage which gives the user to upload his personal recipes on the page and also view others recipes too. It allows users to choose recipes based on their continents or you also choose to view all the recipes at once.",
+    Technologies_Used:['HTML','CSS','Javascript','Handlebars','NodeJS','ExpressJS','MongoDB','API']
+},
+{
+    Key:'3',
+    title:"Amazon Clone",
+    description:"This is webpage which I had made as my initial reactJs project i basically did this to get my reactJS basic concepts strong. This is projects is just the replica of the amazon page it has payment feature as well I have implemented it using firebase authentication. It also uses firestore as it database and is deployed using firebase as well.",
+    Technologies_Used:['ReactJS','Firebase','Firestore','NodeJS','ExpressJS']
 }
 ]
 

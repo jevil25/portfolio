@@ -3,24 +3,22 @@ import Description from './Components/Description.js';
 import Header from './Components/Header.js'
 import Projects from './Components/Projects'
 import projectdata from './Projectdata'
+import { Router,Routes,Route } from "react-router-dom";
 
 function App() {
   return (
-    <><Header />
-    <Description />
-    <Projects 
-      title={projectdata[0].title} 
-      description={projectdata[0].description}
-    />
-    <Projects 
-      title={projectdata[1].title} 
-      description={projectdata[1].description}
-    />
-    <Projects 
-      title={projectdata[2].title} 
-      description={projectdata[2].description}
-    />
-          </>
+    <>
+      <Header />
+        <Description />
+          {Array(projectdata.length).fill().map((_,i)=>(
+            <Projects
+              Key={projectdata[i].Key}
+              title={projectdata[i].title}
+              description={projectdata[i].description}
+              frameworks={projectdata[i].Technologies_Used}
+              />
+          ))}
+   </>
   );
 }
 

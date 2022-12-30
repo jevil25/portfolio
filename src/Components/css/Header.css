@@ -1,0 +1,14 @@
+.navbar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.navlist,.navResume{
+    margin-top: 20px;
+}
+
+.navlist a,.navResume a{
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+}

@@ -1,0 +1,9 @@
+.each_skill{
+    list-style: none;
+    margin-right: 10px;
+}
+
+.skills_list{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+}

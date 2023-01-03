@@ -5,12 +5,10 @@ function Header(){
     return (<>
     <div className="header">
         <div className="navbar">
-            <div className="heading">
-                <h1>Aaron App</h1>
-            </div>
             <div className="navlist">
                 <a href="Description">About</a>
                 <a href="projects">Projects</a>
+                <a href="projects">AJN</a>
                 <a href="skills">Skills</a>
                 <a href="contact">Contact</a>
             </div>

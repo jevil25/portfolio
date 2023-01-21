@@ -1,0 +1,8 @@
+.moving-text{
+    list-style: none;   
+}
+
+.mov-text{
+    display: flex;
+    flex-direction: row;
+}

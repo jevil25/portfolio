@@ -4,6 +4,14 @@ const Skills=[
         color:""
     },
     {
+        title:"AngularJS",
+        color:""
+    },
+    {
+        title:"Python",
+        color:""
+    },
+    {
         title:"NodeJS",
         color:""
     },
@@ -17,14 +25,6 @@ const Skills=[
     },
     {
         title:"CSS",
-        color:""
-    },
-    {
-        title:"AngularJS",
-        color:""
-    },
-    {
-        title:"Python",
         color:""
     },
     {

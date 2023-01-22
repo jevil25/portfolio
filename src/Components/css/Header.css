@@ -4,11 +4,14 @@ body{
     font-style: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
 }
 
+.header{
+    background-color: #0A192F;
+}
+
 .navbar{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: #0A192F;
-    position:fixed;
 }
 
 .navlist a{

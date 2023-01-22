@@ -6,9 +6,9 @@ function Header(){
     <div className="header">
         <div className="navbar">
             <div className="navlist">
+                <a href="projects">AJN</a>
                 <a href="Description">About</a>
                 <a href="projects">Projects</a>
-                <a href="projects">AJN</a>
                 <a href="skills">Skills</a>
                 <a href="contact">Contact</a>
             </div>

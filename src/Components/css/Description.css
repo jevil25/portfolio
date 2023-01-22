@@ -2,7 +2,16 @@
     list-style: none;   
 }
 
+.Description h1{
+    display: flex;
+    flex-direction: column;
+}
+
 .mov-text{
     display: flex;
     flex-direction: row;
+}
+
+.moving-text{
+    text-overflow: ellipsis;
 }

@@ -1,10 +1,14 @@
 .each_skill{
     list-style: none;
     margin-right: 10px;
+    text-align: center;
+    border-radius: 30px;
+    color: #50CBB3;
 }
 
 .skills_list{
     display: grid;
     grid-template-columns: repeat(8,1fr);
     margin-left: 45px;
+    width: 80vw;
 }

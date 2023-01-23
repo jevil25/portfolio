@@ -4,7 +4,7 @@ import Header from './Components/Header.js'
 import Projects from './Components/Projects'
 import projectdata from './Components/Data/Projectdata'
 import Skills from './Components/Skills'
-import Contact from './Components/Data/Contact';
+import Contact from './Components/Contact';
 import TitleHeading from './Components/TitleHeading';
 import Loader from './Components/Loader';
 import { Router,Routes,Route } from "react-router-dom";

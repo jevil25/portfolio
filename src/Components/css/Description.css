@@ -1,5 +1,6 @@
 .Description{
     margin-top: 50px;
+    margin-left: 40px;
 }
 
 .Description h1{
@@ -11,6 +12,12 @@
 
 .Description span{
     color: #50CBB3;
+    font-size: larger;
+}
+
+.Description p{
+    font-size: large;
+    width: 600px;
 }
 
 .Description div{
@@ -23,7 +30,7 @@
 }
 
 .mov-text{
-    display: flex;
-    flex-direction: row;
+    position: relative;
+    bottom: 8px;
 }
 

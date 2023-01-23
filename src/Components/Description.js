@@ -3,14 +3,16 @@ import "./css/Description.css";
 import React,{ useState,useEffect } from "react";
 
 function Description(){
-    const [skill,setSkill] = useState(["ReactJs","AngularJs","NodeJS","Handlebars"]);
+    const [skill,setSkill] = useState(["ReactJs","AngularJs","Handlebars","NodeJS"]);
     const [index,setIndex] = useState(0);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setIndex((index+1)%4);
-        },2000);
-        return () => clearInterval(interval);
+        if(index!=3){
+            const interval = setInterval(() => {
+                setIndex((index+1)%4);
+            },2000);
+            return () => clearInterval(interval);
+    }
     },[index,skill])
 
     return <>

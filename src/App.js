@@ -5,7 +5,7 @@ import Projects from './Components/Projects'
 import projectdata from './Components/Data/Projectdata'
 import Skills from './Components/Skills'
 import Contact from './Components/Data/Contact';
-import ProjectHeading from './Components/ProjectHeading';
+import TitleHeading from './Components/TitleHeading';
 import Loader from './Components/Loader';
 import { Router,Routes,Route } from "react-router-dom";
 
@@ -15,7 +15,9 @@ function App() {
       <Header />
       {/* <Loader /> */}
         <Description />
-        <ProjectHeading />
+        <TitleHeading 
+          title="Projects"
+        />
           {Array(projectdata.length).fill().map((_,i)=>(
             <Projects
               Key={projectdata[i].Key}
@@ -24,7 +26,13 @@ function App() {
               frameworks={projectdata[i].Technologies_Used}
               />
           ))}
+          <TitleHeading 
+            title="Skills"
+          />
           <Skills />
+          <TitleHeading 
+            title="Contact"
+          />
           <Contact />
    </>
   );

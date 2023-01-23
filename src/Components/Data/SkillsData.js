@@ -1,7 +1,7 @@
 const Skills=[
     {
         title:"ReactJS",
-        color:""
+        color:"#5ED4F3"
     },
     {
         title:"AngularJS",

@@ -6,4 +6,5 @@
 .skills_list{
     display: grid;
     grid-template-columns: repeat(8,1fr);
+    margin-left: 45px;
 }

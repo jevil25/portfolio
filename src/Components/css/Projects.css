@@ -8,5 +8,11 @@
 }
 
 .projects{
-    margin-left: 30px;
+    margin-left: 50px;
+    width: 80vw;
+}
+
+.projecttitle{
+    font-size: x-large;
+    color: #50CBB3;
 }

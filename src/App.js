@@ -8,6 +8,7 @@ import Contact from './Components/Contact';
 import TitleHeading from './Components/TitleHeading';
 import Loader from './Components/Loader';
 import { Router,Routes,Route } from "react-router-dom";
+import './Components/css/normalize.css'
 
 function App() {
   return (

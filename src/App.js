@@ -6,6 +6,7 @@ import projectdata from './Components/Data/Projectdata'
 import Skills from './Components/Skills'
 import Contact from './Components/Contact';
 import TitleHeading from './Components/TitleHeading';
+import Footer from './Components/Footer';
 import Loader from './Components/Loader';
 import { Router,Routes,Route } from "react-router-dom";
 import './Components/css/normalize.css'
@@ -35,6 +36,7 @@ function App() {
             title="Contact"
           />
           <Contact />
+          <Footer />
    </>
   );
 }

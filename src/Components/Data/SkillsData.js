@@ -5,91 +5,79 @@ const Skills=[
     },
     {
         title:"AngularJS",
-        color:""
+        color:"#DD0031"
     },
     {
         title:"Python",
-        color:""
+        color:"#FCD12B"
     },
     {
         title:"NodeJS",
-        color:""
+        color:"#539E43"
     },
     {
         title:"ExpressJS",
-        color:""
+        color:"#353535"
     },
     {
         title:"PHP",
-        color:""
+        color:"#8892BF"
     },
     {
         title:"CSS",
-        color:""
+        color:"#1172B8"
     },
     {
         title:"Java",
-        color:""
+        color:"#E76F00"
     },
     {
         title:"C/C++",
-        color:""
+        color:"#005697"
     },
     {
         title:"HTML",
-        color:""
+        color:"#F16529"
     },
     {
         title:"Javascript",
-        color:""
+        color:"#F7DF1E"
     },
     {
         title:"Bootstrap",
-        color:""
+        color:"#7532FA"
     },
     {
         title:"JQuery",
-        color:""
+        color:"#78CFF5"
     },
     {
         title:"MongoDB",
-        color:""
+        color:"#58AA50"
     },
     {
         title:"SQL",
-        color:""
-    },
-    {
-        title:"MariaDB",
-        color:""
-    },
-    {
-        title:"Canva",
-        color:""
+        color:"#000000"
     },
     {
         title:"Vercel",
-        color:""
+        color:"#000000"
     },
     {
         title:"Heroku",
-        color:""
+        color:"#430098"
     },
     {
         title:"Netlify",
-        color:""
+        color:"#4d9abf"
     },
     {
         title:"Git/Github",
-        color:""
+        color:"#09244b"
     },
     {
         title:"Firebase",
-        color:""
-    },
-    {
-        title:"Material-UI",
-        color:""
+        color:"#fcca3f"
     }
 ]
 

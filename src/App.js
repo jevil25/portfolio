@@ -26,6 +26,8 @@ function App() {
               title={projectdata[i].title}
               description={projectdata[i].description}
               frameworks={projectdata[i].Technologies_Used}
+              github={projectdata[i].github}
+              live={projectdata[i].live}
               />
           ))}
           <TitleHeading 

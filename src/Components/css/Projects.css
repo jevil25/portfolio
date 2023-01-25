@@ -5,6 +5,7 @@
 
 .projectList li{
     margin-right: 20px;
+    color: #50CBB3;
 }
 
 .projects{
@@ -15,4 +16,12 @@
 .projecttitle{
     font-size: x-large;
     color: #50CBB3;
+}
+
+.projecttitle span{
+    margin-left: 10px;
+}
+
+.projecttitle span i{
+    font-size: large;
 }

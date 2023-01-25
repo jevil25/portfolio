@@ -11,7 +11,7 @@ body{
 .navbar{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: #0A192F;
+    box-shadow: 0 4px 4px -4px rgba(98, 91, 91, 0.76);
 }
 
 .navlist a{
@@ -23,9 +23,13 @@ body{
     border-bottom: #50CBB3 2px solid;
 }
 
-.navlist,.navResume{
-    margin-top: 20px;
-    margin-bottom: 20px;
+.navlist{
+    margin: 20px 40px;
+}
+
+.navResume{
+    margin-right: 40px;
+    margin-top: 10px;
 }
 
 .navlist a,.navResume a{

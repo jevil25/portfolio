@@ -3,7 +3,7 @@
     margin-right: 10px;
     text-align: center;
     border-radius: 30px;
-    color: #50CBB3;
+    color: white;
 }
 
 .skills_list{
@@ -11,4 +11,11 @@
     grid-template-columns: repeat(8,1fr);
     margin-left: 45px;
     width: 80vw;
+}
+
+.skills_list li{
+    padding: 10px 20px;
+    font-weight: 500;
+    border: 2px solid aliceblue;
+    margin: 5px;
 }

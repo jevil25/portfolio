@@ -8,17 +8,24 @@ function Description(){
     const [letterIndex,setLetterIndex] = useState(0);
     const [displaySkill,setDisplaySkill] = useState("");
     const letterDuration = 200;
+    const [flag,setFlag] = useState(0);
 
     useEffect(() => {
         const letterInterval = setInterval(() => {
             if(letterIndex==skill[index].length-1){
+                setFlag(1);
                 // console.log("hii")
-                setIndex((index+1)%5);
-                setDisplaySkill("");
-                setLetterIndex(0);
+                setTimeout(() => {
+                    setIndex((index + 1) % 5);
+                    setLetterIndex(0);
+                    setDisplaySkill("");
+                    setFlag(0);
+                  }, 1000); 
             }
-            setLetterIndex(((letterIndex+1)%skill[index].length))
-            setDisplaySkill(skill[index].slice(0, letterIndex + 1));
+            if(!flag){
+                setLetterIndex(((letterIndex+1)%skill[index].length))
+                setDisplaySkill(skill[index].slice(0, letterIndex + 1));
+            }
         },letterDuration)
         return () => clearInterval(letterInterval)
     },[letterIndex, displaySkill, index, skill])

@@ -3,15 +3,25 @@ import "./css/Description.css";
 import React,{ useState,useEffect } from "react";
 
 function Description(){
-    const [skill,setSkill] = useState(["CSE Engineer","Web Developer","Philomath","Gamer"]);
+    const [skill,setSkill] = useState(["CSE Engineer","Web Developer","Problem solver","Philomath","Gamer"]);
     const [index,setIndex] = useState(0);
+    const [letterIndex,setLetterIndex] = useState(0);
+    const [displaySkill,setDisplaySkill] = useState("");
+    const letterDuration = 200;
 
     useEffect(() => {
-            const interval = setInterval(() => {
-                setIndex((index+1)%4);
-            },2000);
-            return () => clearInterval(interval);
-    },[index,skill])
+        const letterInterval = setInterval(() => {
+            if(letterIndex==skill[index].length-1){
+                // console.log("hii")
+                setIndex((index+1)%5);
+                setDisplaySkill("");
+                setLetterIndex(0);
+            }
+            setLetterIndex(((letterIndex+1)%skill[index].length))
+            setDisplaySkill(skill[index].slice(0, letterIndex + 1));
+        },letterDuration)
+        return () => clearInterval(letterInterval)
+    },[letterIndex, displaySkill, index, skill])
 
     return <>
     <div className="Description">
@@ -19,7 +29,7 @@ function Description(){
         <h1>Aaron Jevil Nazareth</h1>
         <div>
             <h1>I am a </h1>
-            <h1><span className="mov-text">{skill[index]}</span></h1>
+            <h1><span className="mov-text">{displaySkill}</span></h1>
         </div>
         <p>I am Computer Science Engineering Student. My interests are web development, watching anime, movies, random things on Youtube. I am also a pianist and like to play during my free time.</p>
     </div>

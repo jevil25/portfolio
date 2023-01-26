@@ -25,3 +25,7 @@
 .projecttitle span i{
     font-size: large;
 }
+
+.project_image img{
+    width: 300px;
+}

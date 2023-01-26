@@ -28,6 +28,7 @@ function App() {
               frameworks={projectdata[i].Technologies_Used}
               github={projectdata[i].github}
               live={projectdata[i].live}
+              pic={projectdata[i].pic}
               />
           ))}
           <TitleHeading 

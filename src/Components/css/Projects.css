@@ -35,9 +35,3 @@
     opacity: 50%;
     text-decoration: none;
 }
-
-.project_image a span{
-    visibility: hidden;
-    display: none;
-    color: aliceblue;
-}

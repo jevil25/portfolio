@@ -10,36 +10,54 @@ import Footer from './Components/Footer';
 import Loader from './Components/Loader';
 import { Router,Routes,Route } from "react-router-dom";
 import './Components/css/normalize.css'
+import { useState,useEffect } from 'react';
 
 function App() {
+  const [loading,setLoading] = useState(true);
+
+	useEffect(() => {
+		const timeout = setTimeout(() => {
+		setLoading(false);
+		},5000)
+
+		return () => clearTimeout(timeout);
+	})
   return (
     <>
+    <div>
+      {loading?
+      (<Loader />)
+    :(
+    <div>
       <Header />
-      {/* <Loader /> */}
         <Description />
-        <TitleHeading 
-          title="Projects"
-        />
-          {Array(projectdata.length).fill().map((_,i)=>(
-            <Projects
-              Key={projectdata[i].Key}
-              title={projectdata[i].title}
-              description={projectdata[i].description}
-              frameworks={projectdata[i].Technologies_Used}
-              github={projectdata[i].github}
-              live={projectdata[i].live}
-              pic={projectdata[i].pic}
-              />
-          ))}
           <TitleHeading 
-            title="Skills"
+            title="Projects"
           />
-          <Skills />
-          <TitleHeading 
-            title="Contact"
-          />
+              {Array(projectdata.length).fill().map((_,i)=>(
+                <Projects
+                  Key={projectdata[i].Key}
+                  title={projectdata[i].title}
+                  description={projectdata[i].description}
+                  frameworks={projectdata[i].Technologies_Used}
+                  github={projectdata[i].github}
+                  live={projectdata[i].live}
+                  pic={projectdata[i].pic}
+                  />
+              ))}
+                <TitleHeading 
+                  title="Skills"
+                />
+              <Skills />
+            <TitleHeading 
+              title="Contact"
+            />
           <Contact />
-          <Footer />
+        <Footer />
+      </div>
+    )
+      }
+      </div>
    </>
   );
 }

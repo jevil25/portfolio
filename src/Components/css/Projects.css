@@ -29,3 +29,15 @@
 .project_image img{
     width: 300px;
 }
+
+.project_image a:hover{
+    z-index: 100;
+    opacity: 50%;
+    text-decoration: none;
+}
+
+.project_image a span{
+    visibility: hidden;
+    display: none;
+    color: aliceblue;
+}

@@ -1,7 +1,24 @@
 import React from 'react';
 import './css/Projects.css';
+import { useState } from 'react';
 
 function Projects({ Key,title,description,frameworks,github,live,pic }) {
+  const [hoverStyle,setHoverStyle] = useState({})
+
+  const showTitle = () => {
+    console.log("focus");
+    setHoverStyle({
+      visibility: "visible",
+      display: "block"
+    });
+  }
+
+  const removeTitle = function(){
+    setHoverStyle({
+      visibility: "hidden",
+      display: "none"
+    })
+  }
   
   return (
       <div className="projects">
@@ -19,7 +36,7 @@ function Projects({ Key,title,description,frameworks,github,live,pic }) {
           </span>
         </h2>
         <div className='project_image'>
-          <img src={pic} alt={title} />
+          <a href={live} onMouseOver={showTitle} onMouseLeave={removeTitle}><span style={hoverStyle}>Go to {title}</span><img src={pic} alt={title} /></a>
         </div>
         <p className="projectdes">{description}</p>
         <div className="projectList">

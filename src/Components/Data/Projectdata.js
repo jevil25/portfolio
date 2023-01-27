@@ -1,3 +1,7 @@
+let cadenzaPic = require('../Images/cadenza.png');
+let foodismPic = require('../Images/foodism.png');
+const amazonPic = require('../Images/amazon.png');
+
 const Projectdata=[
     {
     key:'1',
@@ -6,7 +10,7 @@ const Projectdata=[
     Technologies_Used:['HTML','CSS','Javascript','Handlebars','NodeJS','ExpressJS','SQL'],
     github:"https://github.com/jevil25/cadenza",
     live:"https://cadenza.vercel.app/",
-    pic:require('../Images/cadenza.png')
+    pic:cadenzaPic
 },
 {
     key:'2',
@@ -15,7 +19,7 @@ const Projectdata=[
     Technologies_Used:['HTML','CSS','Javascript','Handlebars','NodeJS','ExpressJS','MongoDB','API'],
     github:"https://github.com/jevil25/Foodism.com",
     live:"https://foodism-com.vercel.app/",
-    pic:require('../Images/foodism.png')
+    pic:foodismPic
 },
 {
     Key:'3',
@@ -24,7 +28,7 @@ const Projectdata=[
     Technologies_Used:['ReactJS','Firebase','Firestore','NodeJS','ExpressJS'],
     github:"https://github.com/jevil25/Amazon-clone-using-react",
     live:"",
-    pic:require('../Images/amazon.png')
+    pic:amazonPic
 }
 ]
 

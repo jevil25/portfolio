@@ -1,17 +1,32 @@
-import React from 'react'
-import "./css/Contact.css"
+import React,{ useRef } from 'react';
+import "./css/Contact.css";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_j3rx5lf', 'template_hhuwv8s', form.current, 'AYg12w0x7Ax9ElCjN')
+      .then((result) => {
+          // console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+  };
+
   return (
     <div className="Contact">
-      <div className='Contact1'>
+      <form ref={form} onSubmit={sendEmail} className='Contact1'>
         <div className="form-row">
           <label for="name" className="form-label">Your Name</label>
-          <input type="text" name="name" id="name" class="form-input" />
+          <input type="text" name="fname" id="name" class="form-input" />
         </div>
         <div className="form-row">
           <label for="email" className="form-label">Your Email</label>
-          <input type="email" name="email" id="email" className="form-input" />
+          <input type="email" name="user_email" id="email" className="form-input" />
         </div>
         <div className="form-row">
           <label for="message" className="message">Message</label>
@@ -21,7 +36,7 @@ function Contact() {
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="table"/>
         <button type="submit" className="btn btn-block">Submit</button>
-      </div>
+      </form>
       <div className='contact2'>
         <article class="contact-info">
           <h2>Get in touch!</h2>

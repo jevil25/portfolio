@@ -14,7 +14,7 @@ function Header(){
                 <a href="#Contact">Contact</a>
             </div>
             <div className="navResume">
-                <a href="">Resume</a>
+                <a href="https://drive.google.com/uc?id=12ZTuCrEgXhhmACwGBJGi_cpDKohIcfDR&export=download">Resume</a>
             </div>
         </div>
     </div>

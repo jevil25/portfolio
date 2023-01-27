@@ -81,3 +81,26 @@
 .Contact input,textarea{
     color: #CCD6F6;
 }
+
+@media screen and (max-width:700px) {
+    .Contact1{
+        width:200px;
+    }
+
+    .form-row input,textarea{
+        padding: 0.2rem 0.4rem;
+    }
+
+    .contact-info a{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .Contact{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        position: relative;
+        right: 40px;
+    }
+}

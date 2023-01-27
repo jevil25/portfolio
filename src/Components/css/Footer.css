@@ -1,8 +1,21 @@
 .Footer{
     text-align: center;
     margin: 5px 0px;
+    border-top: 1px solid rgba(98, 91, 91, 0.662);
 }
 
 .Footer span{
     color: #50CBB3;
+}
+
+@media screen and (max-width:800px) {
+    .Footer{
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .Footer{
+        font-size: small;
+    }
 }

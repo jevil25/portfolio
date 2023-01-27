@@ -19,6 +19,18 @@ body{
     height: auto;
 }
 
+.AJN{
+    display: grid;
+    grid-template-columns: 50px 1fr ;
+    align-items: center;
+}
+
+.AJN span{
+    font-size: larger;
+    font-weight: 600;
+    width:150px;
+}
+
 .navlist a{
     margin-right: 100px;
 }
@@ -62,4 +74,8 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+a.AJN:hover{
+    border: transparent;
 }

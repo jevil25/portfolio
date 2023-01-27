@@ -32,3 +32,34 @@
     position: relative;
     bottom: 8px;
 }
+
+@media screen and (max-width:800px) {
+    #Description h1{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    #Description h1{
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    #Description h1{
+        font-size: 25px;
+    }
+
+    #Description div :nth-child(1){
+        margin-right: 8px;
+    }
+
+    #Description p{
+        font-size: medium;
+        width:350px
+    }
+
+    .mov-text{
+        margin-top: 5px;
+    }
+}

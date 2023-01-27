@@ -31,7 +31,7 @@ function Description(){
     },[letterIndex, displaySkill, index, skill])
 
     return <>
-    <div className="Description">
+    <div id="Description">
         <span>Aloha, My name is</span>
         <h1>Aaron Jevil Nazareth</h1>
         <div>

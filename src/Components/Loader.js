@@ -7,6 +7,7 @@ function Loader() {
   return (
 	<div className='Loader'>
 		<img src={loadPic} alt="animation" />
+		<span>Loading...</span>
 	</div>
   )
 }

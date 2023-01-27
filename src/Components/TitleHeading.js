@@ -3,7 +3,7 @@ import "./css/TitleHeading.css"
 
 function TitleHeading({ title }) {
   return (
-    <div class="projectHeading">
+    <div class="projectHeading" id={title}>
       <h1>{ title }</h1>
         <div class="line"></div>
     </div>

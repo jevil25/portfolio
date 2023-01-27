@@ -1,31 +1,30 @@
-.Description{
+#Description{
     margin-top: 50px;
     margin-left: 40px;
 }
-
-.Description h1{
+#Description h1{
     display: flex;
     flex-direction: column;
     font-size: 60px;
     margin: 0;
 }
 
-.Description span{
+#Description span{
     color: #50CBB3;
     font-size: larger;
 }
 
-.Description p{
+#Description p{
     font-size: large;
     width: 600px;
 }
 
-.Description div{
+#Description div{
     display: flex;
     flex-direction: row;
 }
 
-.Description div :nth-child(1){
+#Description div :nth-child(1){
     margin-right: 18px;
 }
 

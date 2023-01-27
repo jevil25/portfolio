@@ -18,14 +18,18 @@ function Projects({ Key,title,description,frameworks,github,live,pic }) {
             </a>
           </span>
         </h2>
-        <div className='project_image'>
-          <a href={live}><img src={pic} alt={title} /></a>
-        </div>
-        <p className="projectdes">{description}</p>
-        <div className="projectList">
+        <div className="project_body">
+          <div className='project_image'>
+            <a href={live}><img src={pic} alt={title} /></a>
+          </div>
+          <div>
+          <p className="projectdes">{description}</p>
+          <div className="projectList">
             {Array(frameworks.length).fill().map((_,i)=>(
                 <li>{frameworks[i]}</li>
             ))}
+            </div>
+          </div>
         </div>
     </div>
   )

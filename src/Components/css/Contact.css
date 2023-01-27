@@ -73,3 +73,11 @@
     background-color: #adb7da;
     cursor: pointer;
 }
+
+.Contact input:focus,textarea:focus{
+    color: #CCD6F6;
+}
+
+.Contact input,textarea{
+    color: #CCD6F6;
+}

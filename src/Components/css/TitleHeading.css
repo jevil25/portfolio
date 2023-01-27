@@ -9,5 +9,25 @@
 .projectHeading div{
     height: 2px;
     background-color: #CCD6F6;
-    width: 75vw;
+    width: 85vw;
+}
+
+@media screen and (max-width:800px) {
+    .projectHeading div{
+        width: 95vw;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .projectHeading div{
+        width: 50vw;
+    }
+
+    .projectHeading{
+        margin-left: 20px;
+    }
+
+    .projectHeading h1{
+        font-size: xx-large;
+    }
 }

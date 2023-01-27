@@ -2,6 +2,7 @@
     display:flex;
     list-style: none;
     margin-left: 20px;
+    flex-wrap: wrap;
 }
 
 .projectList li{
@@ -47,4 +48,42 @@
 .projectdes{
     margin-left: 20px;
     font-size: large;
+}
+
+@media screen and (max-width:800px) {
+    .project_image img{
+        width: 250px;
+    }
+
+    .projectdes{
+        margin-left: 0px;
+        width:400px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .projects{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .projectdes{
+        width:350px;
+    }
+
+    .project_body{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .project_image{
+        width: 250px;
+    }
+    
+    .project_image img{
+        position: relative;
+        right: 10px;
+    }
 }

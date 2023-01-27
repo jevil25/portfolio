@@ -46,6 +46,10 @@
 }
 
 @media screen and (max-width:500px) {
+    #Description{
+        margin-left: 20px;
+    }
+
     #Description h1{
         font-size: 25px;
     }

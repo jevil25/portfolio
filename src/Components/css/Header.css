@@ -28,11 +28,13 @@ body{
 .AJN span{
     font-size: larger;
     font-weight: 600;
-    width:150px;
+    width:200px;
 }
 
 .navlist a{
-    margin-right: 100px;
+    margin-right: 50px;
+    font-size: larger;
+
 }
 
 .navlist a:hover{
@@ -57,7 +59,7 @@ body{
 .navResume a{
     color: #50CBB3;
     border-radius: 20px;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border: 1px solid #50CBB3;
 }
 

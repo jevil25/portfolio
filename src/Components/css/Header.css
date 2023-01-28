@@ -81,3 +81,98 @@ body{
 a.AJN:hover{
     border: transparent;
 }
+
+.navbar-toggle{
+    visibility: hidden;
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .navlist a{
+        margin-right: 25px;
+        font-size: large;
+    }
+
+    .AJN span{
+        font-size: large;
+        width: 170px;
+    }
+
+
+}
+
+@media screen and (max-width: 768px){
+    .navbar-toggle{
+        visibility: visible;
+        display: block;
+        position: absolute;
+        top:15px;
+        right: 7vw;
+        background-color: #50CBB3;
+        color: #0A192F;
+        border: transparent;
+        border-radius: 5px;
+    }
+
+    .navbar{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .navbar-padding{
+        padding-bottom: 20px;
+    }
+
+    .AJN{
+        grid-template-columns: 35px 1fr;
+        position:relative;
+        right: 25vw;
+    }
+
+    .AJN span{
+        font-size: large;
+        width: 140px;
+    }
+
+    .AJN img{
+        width: 30px;
+    }
+
+    .navlist{
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    .navlist a{
+        margin: 5px 0;
+    }
+    .navResume a{
+        position: relative;
+        left: 0;
+        padding: 5px 10px;
+        font-size: medium;
+    }
+
+    .navResume{
+        margin-right: 0px;
+    }
+
+    .mainnav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mainnav a{
+        border-bottom: 1px solid rgba(98, 91, 91, 0.76);
+        padding-bottom: 5px;
+        font-size: medium;
+    }
+
+    .closeNav{
+        display: none;
+        visibility: hidden;
+    }
+}
+    
+    
+    
+    

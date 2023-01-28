@@ -14,7 +14,7 @@ function Header(){
     return (<>
     <div className="header">
         <div className={`navbar ${!isOpen ? '':"navbar-padding"}`}>
-            <div className="navlist">
+            <div data-aos="fade-left" data-aos-duration="1000" className="navlist">
                 <a href="#Description" className='AJN'><img src={logoImage} alt="" /><span>Aaron Nazareth</span></a>
                 <button onClick={toggle} class="navbar-toggle">
                     <i class="fas fa-bars"></i>
@@ -27,7 +27,7 @@ function Header(){
                     <a href="#Contact">Contact</a>
                 </div>
             </div>
-            <div className={`navResume ${!isOpen ? 'closeNav':""}`}>
+            <div ata-aos="fade-right" data-aos-duration="1000" className={`navResume ${!isOpen ? 'closeNav':""}`}>
                 <a href="https://drive.google.com/uc?id=12ZTuCrEgXhhmACwGBJGi_cpDKohIcfDR&export=download">Resume</a>
             </div>
         </div>

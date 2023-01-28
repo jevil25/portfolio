@@ -60,6 +60,7 @@ function App() {
                   pic={projectdata[i].pic}
                   />
               ))}
+              <h3 class="apph3">For more projects visit my github repo's here: <p><a href="https://github.com/jevil25"><i class="fa-brands fa-github"></i>jevil25</a></p></h3>
                 <TitleHeading 
                   title="Skills"
                 />

@@ -3,7 +3,7 @@ import './css/Projects.css';
 import { useState } from 'react';
 
 function Projects({ Key,title,description,frameworks,github,live,pic }) {
-  console.log(title)
+  // console.log(title)
   return (
       <div data-aos="fade-right" data-aos-duration="1000" className="projects">
         <h2 className="projecttitle">

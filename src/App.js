@@ -13,11 +13,9 @@ import './Components/css/normalize.css'
 import { useState,useEffect } from 'react';
 import Education from './Components/Education';
 import education from './Components/Data/education';
-import AOS from 'aos';
 // ..
 
 function App() {
-  AOS.init();
   const [loading,setLoading] = useState(true);
 
 	useEffect(() => {

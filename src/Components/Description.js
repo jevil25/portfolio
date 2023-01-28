@@ -1,6 +1,6 @@
-import skills from "./Data/mainSkills";
 import "./css/Description.css";
 import React,{ useState,useEffect } from "react";
+const profilepic = require("./Images/profilePic.JPG")
 
 function Description(){
     const [skill,setSkill] = useState(["CSE Engineer","Web Developer","Problem solver","Philomath","Gamer"]);
@@ -32,13 +32,18 @@ function Description(){
 
     return <>
     <div id="Description">
-        <span>Aloha, My name is</span>
-        <h1>Aaron Jevil Nazareth</h1>
         <div>
-            <h1>I am a </h1>
-            <h1><span className="mov-text">{displaySkill}</span></h1>
+            <span>Aloha, My name is</span>
+            <h1>Aaron Jevil Nazareth</h1>
+            <div className="main-h1">
+                <h1>I am a </h1>
+                <h1><span className="mov-text">{displaySkill}</span></h1>
+            </div>
+            <p>I am Computer Science Engineering Student. My interests are web development, watching anime, movies, random things on Youtube. I am also a pianist and like to play during my free time.</p>
         </div>
-        <p>I am Computer Science Engineering Student. My interests are web development, watching anime, movies, random things on Youtube. I am also a pianist and like to play during my free time.</p>
+        <div className="profile_img">
+            <img src={profilepic} alt="" />
+        </div>
     </div>
     </>
 }

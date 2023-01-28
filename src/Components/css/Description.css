@@ -1,7 +1,10 @@
 #Description{
     margin-top: 50px;
     margin-left: 40px;
+    display: grid;
+    grid-template-columns: 800px 1fr;
 }
+
 #Description h1{
     display: flex;
     flex-direction: column;
@@ -19,23 +22,79 @@
     width: 600px;
 }
 
-#Description div{
+.main-h1{
     display: flex;
     flex-direction: row;
 }
 
-#Description div :nth-child(1){
+.main-h1 :nth-child(1){
     margin-right: 18px;
 }
 
 .mov-text{
     position: relative;
     bottom: 8px;
+    left: 10px;
 }
+
+.profile_img img{
+    width: 400px;
+}
+
+@media screen and (max-width:1200px) {
+    #Description{
+        grid-template-columns: 650px 1fr;
+    }
+
+    .profile_img img{
+        width: 250px;
+    }
+
+    #Description h1{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    #Description{
+        grid-template-columns: 550px 1fr;
+    }
+
+    #Description p{
+        font-size: 20px;
+        width:450px;
+    }
+
+    .profile_img img{
+        width: 200px;
+    }
+
+    #Description h1{
+        font-size: 40px;
+    }
+}
+
 
 @media screen and (max-width:800px) {
     #Description h1{
+        font-size: 35px;
+    }
+
+    #Description p{
+        font-size: 15px;
+        width:400px;
+    }
+
+    #Description{
+        grid-template-columns: 500px 1fr;
+    }
+
+    #Description h1{
         font-size: 40px;
+    }
+
+    .profile_img img{
+        width: 200px;
     }
 }
 
@@ -43,11 +102,33 @@
     #Description h1{
         font-size: 35px;
     }
+
+    #Description :nth-child(1){
+        grid-row: 2;
+    }
+
+    #Description{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #Description p{
+        font-size: 15px;
+        width:300px;
+    }
 }
 
 @media screen and (max-width:500px) {
     #Description{
         margin-left: 20px;
+        margin-top:30px ;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+    }
+
+    #Description :nth-child(1){
+        grid-row: 2;
     }
 
     #Description h1{
@@ -60,7 +141,7 @@
 
     #Description p{
         font-size: medium;
-        width:350px
+        width:330px
     }
 
     .mov-text{

@@ -28,7 +28,7 @@ function Header(){
                 </div>
             </div>
             <div ata-aos="fade-right" data-aos-duration="1000" className={`navResume ${!isOpen ? 'closeNav':""}`}>
-                <a href="https://drive.google.com/uc?id=12ZTuCrEgXhhmACwGBJGi_cpDKohIcfDR&export=download">Resume</a>
+                <a href="https://drive.google.com/uc?id=18hywkm-rr8uqiWEWpdPpyaLwKZMUYS87&export=download">Resume</a>
             </div>
         </div>
     </div>

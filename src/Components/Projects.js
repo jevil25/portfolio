@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 function Projects({ Key,title,description,frameworks,github,live,pic }) {
   return (
-      <div className="projects">
+      <div data-aos="fade-right" data-aos-duration="1000" className="projects">
         <h2 className="projecttitle">
           {title}
           <span>

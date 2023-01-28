@@ -18,7 +18,7 @@ function Contact() {
   };
 
   return (
-    <div className="Contact">
+    <div data-aos="fade-up" data-aos-duration="1000" className="Contact">
       <form ref={form} onSubmit={sendEmail} className='Contact1'>
         <div className="form-row">
           <label for="name" className="form-label">Your Name</label>

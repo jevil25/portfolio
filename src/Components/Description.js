@@ -31,7 +31,7 @@ function Description(){
     },[letterIndex, displaySkill, index, skill])
 
     return <>
-    <div id="Description">
+    <div data-aos="fade-right" data-aos-duration="1000" id="Description">
         <div>
             <span>Aloha, My name is</span>
             <h1>Aaron Jevil Nazareth</h1>

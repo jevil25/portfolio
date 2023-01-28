@@ -13,8 +13,12 @@ import './Components/css/normalize.css'
 import { useState,useEffect } from 'react';
 import Education from './Components/Education';
 import education from './Components/Data/education';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
 
 function App() {
+  AOS.init();
   const [loading,setLoading] = useState(true);
 
 	useEffect(() => {

@@ -1,0 +1,29 @@
+#education{
+    margin-left: 45px;
+}
+
+#education h1{
+    color: #50CBB3;
+    margin-bottom: 0px;
+}
+
+#education h5,h3{
+    margin-top:2px ;
+    margin-bottom: 2px;
+}
+
+@media screen and (max-width:700px) {
+    #education h1{
+        font-size: x-large;
+    }
+}
+
+@media screen and (max-width:500px) {
+    #education h1{
+        font-size: large;
+    }
+
+    #education{
+        margin-left: 20px;
+    }
+}

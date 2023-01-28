@@ -11,6 +11,8 @@ import Loader from './Components/Loader';
 import { Router,Routes,Route } from "react-router-dom";
 import './Components/css/normalize.css'
 import { useState,useEffect } from 'react';
+import Education from './Components/Education';
+import education from './Components/Data/education';
 
 function App() {
   const [loading,setLoading] = useState(true);
@@ -31,6 +33,18 @@ function App() {
     <div>
       <Header />
         <Description />
+        <TitleHeading 
+            title="Education"
+          />
+        {Array(education.length).fill().map((_,i)=>(
+                <Education
+                  Key={education[i].Key}
+                  college={education[i].college}
+                  year={education[i].year}
+                  course={education[i].course}
+                  marking_scheme={education[i].marking_scheme}
+                  />
+              ))}
           <TitleHeading 
             title="Projects"
           />

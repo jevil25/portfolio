@@ -21,8 +21,8 @@ function Header(){
                 </button>
                 <div className={`mainnav ${!isOpen ? 'closeNav':""}`}>
                     <a href="#Description">About</a>
-                    <a href="#Education">Education</a>
                     <a href="#Projects">Projects</a>
+                    <a href="#Education">Education</a>
                     <a href="#Skills">Skills</a>
                     <a href="#Contact">Contact</a>
                 </div>

@@ -35,18 +35,6 @@ function App() {
       <Header />
         <Description />
         <TitleHeading 
-            title="Education"
-          />
-        {Array(education.length).fill().map((_,i)=>(
-                <Education
-                  Key={education[i].Key}
-                  college={education[i].college}
-                  year={education[i].year}
-                  course={education[i].course}
-                  marking_scheme={education[i].marking_scheme}
-                  />
-              ))}
-          <TitleHeading 
             title="Projects"
           />
               {Array(projectdata.length).fill().map((_,i)=>(
@@ -61,6 +49,18 @@ function App() {
                   />
               ))}
               <h3 class="apph3">For more projects visit my github repo's here: <p><a href="https://github.com/jevil25"><i class="fa-brands fa-github"></i>jevil25</a></p></h3>
+        <TitleHeading 
+            title="Education"
+          />
+        {Array(education.length).fill().map((_,i)=>(
+                <Education
+                  Key={education[i].Key}
+                  college={education[i].college}
+                  year={education[i].year}
+                  course={education[i].course}
+                  marking_scheme={education[i].marking_scheme}
+                  />
+              ))}
                 <TitleHeading 
                   title="Skills"
                 />

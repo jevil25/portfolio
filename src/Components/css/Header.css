@@ -1,16 +1,12 @@
+html{
+    max-width: 100%;
+    overflow-x:hidden;
+}    
+
 body{
     background-color: #0A192F;
     color: #CCD6F6;
     font-style: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
-}
-
-html{
-    overflow-x: hidden;
-    position: relative;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
 }
 
 .header{
@@ -184,7 +180,8 @@ a.AJN:hover{
     
 @media screen and (max-width:500px) {
     html{
-        overscroll-behavior-x:contain;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 }   
     

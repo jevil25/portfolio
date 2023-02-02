@@ -141,6 +141,10 @@
         margin-right: 8px;
     }
 
+    .profile_img img{
+        width:230px;
+    }
+
     #Description p{
         font-size: medium;
         width:330px

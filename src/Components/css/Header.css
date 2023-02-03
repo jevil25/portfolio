@@ -183,5 +183,9 @@ a.AJN:hover{
         max-width: 100%;
         overflow-x: hidden;
     }
+
+    body {
+        zoom: 1;
+      }
 }   
     

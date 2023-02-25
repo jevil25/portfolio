@@ -4,7 +4,7 @@ const education = [
         college:"N.M.A.M Institute of Technology - Nitte",
         year:"2020-2024",
         course:"B.E in Computer Science Engineering",
-        marking_scheme:"CGPA: 8.81"
+        marking_scheme:"CGPA: 8.97"
     },
     {
         key:2,

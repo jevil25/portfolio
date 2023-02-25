@@ -9,7 +9,7 @@ const education = [
     {
         key:2,
         college:"Poornaprajna P.U College - Udupi",
-        year:"2018-2018",
+        year:"2018-2020",
         course:"Science(PCME)",
         marking_scheme:"Percentage: 89.4"
     },

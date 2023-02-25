@@ -14,6 +14,7 @@ import { useState,useEffect } from 'react';
 import Education from './Components/Education';
 import education from './Components/Data/education';
 import Experience from './Components/Experience';
+import experience from './Components/Data/experience';
 // ..
 
 function App() {
@@ -53,7 +54,16 @@ function App() {
           <TitleHeading 
             title="Experience"
           />
-        <Experience />
+        {Array(experience.length).fill().map((_,i)=>(
+                <Experience
+                  Key={experience[i].Key}
+                  company={experience[i].company}
+                  designation={experience[i].designation}
+                  duration={experience[i].duration}
+                  description={experience[i].description}
+                  certificate={experience[i].certificate}
+                  />
+          ))} 
         <TitleHeading 
             title="Education"
           />

@@ -1,0 +1,39 @@
+.experience{
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+.experienceHeading{
+    font-size: 30px;
+    font-weight: 600;
+    color: #50cbb3;
+}
+
+.expdescription h4{
+    margin-top: 0px;
+    margin-bottom: 3px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.certification a{
+    text-decoration: none;
+    color: #ccd3eb;
+    text-decoration: underline;
+}
+
+.certification a:hover{
+    color: #50cbb3;
+}
+
+@media screen and (max-width: 500px) {
+    .experience{
+        margin-left: 0px;
+    }
+}

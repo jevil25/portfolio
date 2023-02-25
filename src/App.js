@@ -13,6 +13,7 @@ import './Components/css/normalize.css'
 import { useState,useEffect } from 'react';
 import Education from './Components/Education';
 import education from './Components/Data/education';
+import Experience from './Components/Experience';
 // ..
 
 function App() {
@@ -49,6 +50,10 @@ function App() {
                   />
               ))}
               <h3 class="apph3">For more projects visit my github repo's here: <p><a href="https://github.com/jevil25"><i class="fa-brands fa-github"></i>jevil25</a></p></h3>
+          <TitleHeading 
+            title="Experience"
+          />
+        <Experience />
         <TitleHeading 
             title="Education"
           />

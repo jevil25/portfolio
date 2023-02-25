@@ -1,5 +1,9 @@
 const Skills=[
     {
+        title:"NextJS",
+        color:"#000000"
+    },
+    {
         title:"ReactJS",
         color:"#5ED4F3"
     },
@@ -18,6 +22,14 @@ const Skills=[
     {
         title:"ExpressJS",
         color:"#353535"
+    },
+    {
+        title:"GraphQL",
+        color:"#E10098"
+    },
+    {
+        title:"Prisma",
+        color:"#0C344B"
     },
     {
         title:"PHP",
@@ -78,6 +90,10 @@ const Skills=[
     {
         title:"Firebase",
         color:"#fcca3f"
+    },
+    {
+        title:"TailwindCSS",
+        color:"#15b8c5"
     }
 ]
 

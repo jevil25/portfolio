@@ -9,20 +9,26 @@ function Projects({ Key,title,description,frameworks,github,live,pic }) {
         <h2 className="projecttitle">
           {title}
           <span>
-            <a href={github}>
-              <i class="fa-brands fa-github"></i>
-            </a>
+            {github.map((github)=>
+            (<a href={github}>
+              <i class="fa-brands fa-github spacing"></i>
+            </a>)
+            )}
           </span>
           <span>
-            <a href={live}>
-              <i class="fa-solid fa-link"></i>
-            </a>
+            {live.map((live)=>
+            (<a href={live}>
+              <i class="fa-solid fa-link spacings"></i>
+            </a>)
+            )}
           </span>
         </h2>
         <div className="project_body">
-          <div className='project_image'>
+          {pic.map((pic)=>
+          ( <div className='project_image'>
             <a href={live}><img src={pic} alt={title} /></a>
-          </div>
+          </div>)
+          )}
           <div>
           <p className="projectdes">{description}</p>
           <div className="projectList">

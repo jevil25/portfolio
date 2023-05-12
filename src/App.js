@@ -8,7 +8,6 @@ import Contact from './Components/Contact';
 import TitleHeading from './Components/TitleHeading';
 import Footer from './Components/Footer';
 import Loader from './Components/Loader';
-import { Router,Routes,Route } from "react-router-dom";
 import './Components/css/normalize.css'
 import { useState,useEffect } from 'react';
 import Education from './Components/Education';

@@ -77,3 +77,33 @@
     margin-left: 20px;
   }
 }
+
+.projectType{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  margin-left: 35px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.projectButton{
+  background-color: #132642;
+  border: none;
+  border-radius: 999px;
+  padding: 15px;
+  color: #ccd6f6;
+  font-size: large;
+  cursor: pointer;
+}
+
+.active{
+  background-color: #49b792;
+  color: #132642;
+}
+
+.projectButton:hover{
+  background-color: #49b792;
+  color: #132642;
+}

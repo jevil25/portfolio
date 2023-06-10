@@ -13,16 +13,18 @@ const Projectdata=[
         Technologies_Used:['ReactJS','Github','vercel','Javascript','React-hooks','Aos-Animation'],
         github:["https://github.com/jevil25/portfolio"],
         live:["https://aaronnazareth.vercel.app/"],
-        pic:[portfolioPic]
+        pic:[portfolioPic],
+        type:"web"
     },
     {
         Key:2,
         title:"Incridea",
-        description:"Icridea is 4 day college fest, this webpage was made for users to login in and register for the events. I was given the task to make the admin dashboard which had several features like adding events, deleting events, viewing the registered users, viewing the events and also updating the events. I also wrote many queries and mutations in the server side. Also made some changes in the authentication part of the webpage.",
+        description:"Incridea is 4 day college fest, this webpage was made for users to login in and register for the events. I was given the task to make the admin dashboard which had several features like adding events, deleting events, viewing the registered users, viewing the events and also updating the events. I also wrote many queries and mutations in the server side. Also made some changes in the authentication part of the webpage.",
         Technologies_Used:['NextJS','NodeJS','ExpressJS','MongoDB','GraphQL','Apollo-Client','JWT','Bcrypt','TailwindCSS',"Prisma-ORM","Pothos","Vercel","Github"],
         github:["https://github.com/incridea-23/incridea-client","https://github.com/incridea-23/incridea-server"],
         live:["https://incridea.vercel.app/","https://incridea.onrender.com/graphql"],
-        pic:[incrideaClient]
+        pic:[incrideaClient],
+        type:"web"
     },
     {
     key:3,
@@ -31,7 +33,8 @@ const Projectdata=[
     Technologies_Used:['HTML','CSS','Javascript','Handlebars','NodeJS','ExpressJS','SQL'],
     github:["https://github.com/jevil25/cadenza"],
     live:["https://cadenza.vercel.app/"],
-    pic:[cadenzaPic]
+    pic:[cadenzaPic],
+    type:"web"
 },
 {
     key:4,
@@ -40,7 +43,8 @@ const Projectdata=[
     Technologies_Used:['HTML','CSS','Javascript','Handlebars','NodeJS','ExpressJS','MongoDB','API'],
     github:["https://github.com/jevil25/Foodism.com"],
     live:["https://foodism-com.vercel.app/"],
-    pic:[foodismPic]
+    pic:[foodismPic],
+    type:"web"
 },
 {
     Key:4,
@@ -49,7 +53,8 @@ const Projectdata=[
     Technologies_Used:['ReactJS','Firebase','Firestore','NodeJS','ExpressJS'],
     github:["https://github.com/jevil25/Amazon-clone-using-react"],
     live:[""],
-    pic:[amazonPic]
+    pic:[amazonPic],
+    type:"web"
 }
 ]
 

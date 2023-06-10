@@ -18,6 +18,7 @@ import experience from './Components/Data/experience';
 
 function App() {
   const [loading,setLoading] = useState(true);
+  const [projectType, setProjectType] = useState('web');
 
 	useEffect(() => {
 		const timeout = setTimeout(() => {
@@ -38,6 +39,12 @@ function App() {
         <TitleHeading 
             title="Projects"
           />
+          <div className="projectType">
+            <button onClick={() => setProjectType('web')} className={projectType === 'web' ? 'active projectButton' : 'projectButton'}>Web</button>
+            <button onClick={() => setProjectType('mobile')} className={projectType === 'mobile' ? 'active projectButton' : 'projectButton'}>Mobile</button>
+            <button onClick={() => setProjectType('Machine Learning')} className={projectType === 'machineLearning' ? 'active projectButton' : 'projectButton'}>machine Learning</button>
+            <button onClick={() => setProjectType('Graphics')} className={projectType === 'dataScience' ? 'active projectButton' : 'projectButton'}>Graphics</button>
+          </div>
               {Array(projectdata.length).fill().map((_,i)=>(
                 <Projects
                   Key={projectdata[i].Key}

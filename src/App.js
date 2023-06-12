@@ -42,10 +42,12 @@ function App() {
           <div className="projectType">
             <button onClick={() => setProjectType('web')} className={projectType === 'web' ? 'active projectButton' : 'projectButton'}>Web</button>
             <button onClick={() => setProjectType('mobile')} className={projectType === 'mobile' ? 'active projectButton' : 'projectButton'}>Mobile</button>
-            <button onClick={() => setProjectType('Machine Learning')} className={projectType === 'machineLearning' ? 'active projectButton' : 'projectButton'}>machine Learning</button>
-            <button onClick={() => setProjectType('Graphics')} className={projectType === 'dataScience' ? 'active projectButton' : 'projectButton'}>Graphics</button>
+            <button onClick={() => setProjectType('Machine Learning')} className={projectType === 'Machine Learning' ? 'active projectButton' : 'projectButton'}>Machine Learning</button>
+            <button onClick={() => setProjectType('Graphics')} className={projectType === 'Graphics' ? 'active projectButton' : 'projectButton'}>Graphics</button>
           </div>
+          <div className="projectDisplay">
               {Array(projectdata.length).fill().map((_,i)=>(
+                projectdata[i].type === projectType &&
                 <Projects
                   Key={projectdata[i].Key}
                   title={projectdata[i].title}
@@ -54,8 +56,10 @@ function App() {
                   github={projectdata[i].github}
                   live={projectdata[i].live}
                   pic={projectdata[i].pic}
+                  colors={projectdata[i].technologies_color}
                   />
               ))}
+            </div>
               <h3 class="apph3">For more projects visit my github repo's here: <p><a href="https://github.com/jevil25"><i class="fa-brands fa-github"></i>jevil25</a></p></h3>
           <TitleHeading 
             title="Experience"

@@ -58,26 +58,6 @@
   margin-right: 5px;
 }
 
-@media screen and (max-width:600px) {
-  .apph3{
-    margin-left: 35px;
-    font-size: small;
-  }
-}
-
-@media screen and (max-width:500px) {
-  .apph3{
-    margin-left: 20px;
-  }
-}
-
-@media screen and (max-width:400px) {
-  .apph3{
-    font-size: 12px;
-    margin-left: 20px;
-  }
-}
-
 .projectType{
   display: flex;
   flex-direction: row;
@@ -107,3 +87,86 @@
   background-color: #49b792;
   color: #132642;
 }
+
+.projectDisplay{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+
+@media screen and (max-width:600px) {
+  .apph3{
+    margin-left: 35px;
+    font-size: small;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .apph3{
+    margin-left: 20px;
+  }
+
+  .projectType{
+    gap: 5px;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .projectButton{
+    background-color: #132642;
+    border: none;
+    border-radius: 999px;
+    padding: 10px;
+    color: #ccd6f6;
+    font-size: medium;
+    cursor: pointer;
+    height: 50px;
+  }
+
+  .projectDisplay{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .apph3{
+    font-size: 12px;
+    margin-left: 20px;
+  }
+
+  .projectType{
+    gap: 5px;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .projectButton{
+    background-color: #132642;
+    border: none;
+    border-radius: 999px;
+    padding: 10px;
+    color: #ccd6f6;
+    font-size: medium;
+    cursor: pointer;
+    height: 50px;
+  }
+
+  .projectDisplay{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+

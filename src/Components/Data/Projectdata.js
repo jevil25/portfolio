@@ -4,6 +4,10 @@ const amazonPic = require('../Images/amazon.png');
 const portfolioPic = require("../Images/portfolio.png");
 const incrideaClient = require("../Images/incridea-client.png");
 const incrideaServer = require("../Images/incridea-server.png");
+const Vinland = require("../Images/vinland.png");
+const Homify = require("../Images/Homify.png");
+const letter = require("../Images/letter_recognition.png");
+const compiler = require("../Images/compiler.png");
 
 
 const Projectdata = [
@@ -61,7 +65,51 @@ const Projectdata = [
       "pic": [amazonPic],
       "type": "web",
       "technologies_color": ["#5ED4F3", "#fcca3f", "#5ED4F3", "#5ED4F3", "#539E43"]
-    }
+    },
+    {
+      "Key": 5,
+      "title": "Homify",
+      "description": "This is Android Mobile App. Used to give users important updates. It has features like store important document id and expriy date, store important contacts, and also has a feature to add grocery list. It also has a feature to set reminders for the documents and contacts.",
+      "Technologies_Used": ["JAVA", "Android Studio", "API", "Mobile App","Git"],
+      "github": ["https://github.com/Amith-Jagannath/Homify"],
+      "live": [""],
+      "pic": [Homify],
+      "type": "mobile",
+      "technologies_color": ["#5ED4F3", "#fcca3f", "#5ED4F3", "#5ED4F3", "#539E43"]
+    },
+    {
+      "Key": 6,
+      "title": "Letter Recognition",
+      "description": "This is a Machine Learning project. It is used to recognize the letters. It uses Algorithms like KNN, SVM, and Random Forest. It takes 16 features as input and predicts the letter.",
+      "Technologies_Used": ["Python", "Sciket-learn", "Machine Learning", "Data Preprocssing","Git"],
+      "github": ["https://github.com/jevil25/letter-recognition-using-ml"],
+      "live": [""],
+      "pic": [letter],
+      "type": "Machine Learning",
+      "technologies_color": ["#5ED4F3", "#fcca3f", "#5ED4F3", "#5ED4F3", "#539E43"]
+    },
+    {
+      "Key": 7,
+      "title": "Vinland Island",
+      "description": "This is 2D Island made used Open GL. It has 3 views of the Island. It has various shops, people moving , and many more secenry features.",
+      "Technologies_Used": ["C/C++", "OpenGL", "freeGlut", "Designing","Animation"],
+      "github": ["https://github.com/jevil25/The-Island-OpenGL"],
+      "live": [""],
+      "pic": [Vinland],
+      "type": "Graphics",
+      "technologies_color": ["#5ED4F3", "#fcca3f", "#5ED4F3", "#5ED4F3", "#539E43"]
+    },
+    {
+      "Key": 8,
+      "title": "Cloud Compiler",
+      "description": "This is a java cloud sim based program. It is used to compile and run the code. It has features like compile and run the code. It gives proper error messages and gives proper ouput. It suports multiple programming languages. It can also take live user input.",
+      "Technologies_Used": ["JAVA", "Cloud Sim", "C/C++", "Scheduling Algorithms","Git"],
+      "github": ["https://github.com/jevil25/cloud_Compiler"],
+      "live": [""],
+      "pic": [compiler],
+      "type": "Cloud Computing",
+      "technologies_color": ["#5ED4F3", "#fcca3f", "#5ED4F3", "#5ED4F3", "#539E43"]
+    },
   ]
   
 

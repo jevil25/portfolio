@@ -44,6 +44,7 @@ function App() {
             <button onClick={() => setProjectType('mobile')} className={projectType === 'mobile' ? 'active projectButton' : 'projectButton'}>Mobile</button>
             <button onClick={() => setProjectType('Machine Learning')} className={projectType === 'Machine Learning' ? 'active projectButton' : 'projectButton'}>Machine Learning</button>
             <button onClick={() => setProjectType('Graphics')} className={projectType === 'Graphics' ? 'active projectButton' : 'projectButton'}>Graphics</button>
+            <button onClick={() => setProjectType('Cloud Computing')} className={projectType === 'Cloud Computing' ? 'active projectButton' : 'projectButton'}>Cloud Computing</button>
           </div>
           <div className="projectDisplay">
               {Array(projectdata.length).fill().map((_,i)=>(

@@ -26,7 +26,7 @@ function Projects({ Key,title,description,frameworks,github,live,pic,colors }) {
   useEffect(() => {
     const handleResize = () => setScreenWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
-    setDesClass("showDes")
+    if(screenWidth < 600) setDesClass("showDes");
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 

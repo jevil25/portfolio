@@ -5,6 +5,10 @@
     cursor: pointer;
 }
 
+.width{
+    width: 100%;
+}
+
 .project_body{
     display: flex;
     flex-direction: column;
@@ -85,4 +89,35 @@
     padding:5px;
     width: 100px;
     height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .projects{
+        width: 80vw;
+    }
+    .project_image{
+        width: 100%;
+    }
+    .projecttitle{
+        font-size: 20px;
+    }
+    .projectStack{
+        font-size: small;
+        margin: 10px;
+    }
+    .each_skill2{
+        width: 80px;
+        font-size: 20px;
+    }
+    .projectDes{
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .projectList li{
+        font-size: small;
+    }
 }

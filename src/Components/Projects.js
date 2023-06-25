@@ -17,21 +17,25 @@ function Projects({ Key,title,description,frameworks,github,live,pic,colors }) {
               {title}
             </h2>
             <p className={`projectDes`}>{description}</p>
-            <div className="projectList">
-              {Array(frameworks.length).fill().map((_,i)=>(
-                  <li className='each_skill2'>{frameworks[i]}</li>
-              ))}
+            <div className='projectTech'>
+              <div className="projectList">
+                {Array(frameworks.length).fill().map((_,i)=>(
+                    <li className='each_skill2'>{frameworks[i]}</li>
+                ))}
+              </div>
             </div>
+            <div className='projectLinks'>
             {github.map((github)=>
-              (<a href={github}>
-                <i class="fa-brands fa-github spacing"></i>
-              </a>)
-              )}
-              {live.map((live)=>
-              (<a href={live}>
-                <i class="fa-solid fa-link spacings"></i>
-              </a>)
-              )}
+            (<a href={github}>
+              <i class="fa-brands fa-github spacing"></i>
+            </a>)
+            )}
+            {live.map((live)=>
+            (<a href={live}>
+              <i class="fa-solid fa-link spacings"></i>
+            </a>)
+            )}
+            </div>
           </div>
           {pic.map((pic)=>
           ( <div className='project_image'>

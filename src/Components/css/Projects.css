@@ -1,25 +1,28 @@
 .projects{
-    width: 40vw;
-    background-color: #132642;
     border-radius: 20px;
     cursor: pointer;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .width{
     width: 100%;
 }
 
+.project1{
+    flex-basis: 50%;
+}
+
 .project_body{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-items: center;
     padding: 10px;
 }
 
 .project_image{
-    width: 450px;
-    height: auto;
+    flex-basis: 50%;
 }
 
 .project_image img{
@@ -74,21 +77,32 @@
 .projectList li{
     list-style-type: none;
     color: #ccd6f6;
-    font-size: large;
+    font-size: small;
 }
 
 .each_skill2{
     list-style: none;
     margin-right: 10px;
     text-align: center;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 30px;
-    border-color: white;
     color: #ccd6f6;
     padding:5px;
     width: 100px;
     height: auto;
+}
+
+.projectDes{
+    color: #ccd6f6;
+    font-size: 20px;
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #112240;
 }
 
 @media screen and (max-width: 768px) {

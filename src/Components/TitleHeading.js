@@ -1,5 +1,5 @@
 import React from 'react'
-import "./css/TitleHeading.css"
+import "../css/TitleHeading.css"
 
 function TitleHeading({ title }) {
   return (

@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import './css/Projects.css';
+import '../css/Projects.css';
 import { useState } from 'react';
 import { motion } from "framer-motion";
 
-function Projects({ Key,title,description,frameworks,github,live,pic,colors }) {
+function Projects({ Key,title,description,frameworks,github,live,pic,colors,type }) {
   return (
       <motion.div 
         initial={{ opacity: 0.5, scale: 0.5 }}
@@ -38,8 +38,8 @@ function Projects({ Key,title,description,frameworks,github,live,pic,colors }) {
             </div>
           </div>
           {pic.map((pic)=>
-          ( <div className='project_image'>
-            <a href={live}><img src={pic} alt={title} /></a>
+          ( <div className='project_image' style={type=="mobile" ? {textAlign:"center"}:{}}>
+            <a href={live} ><img src={pic} alt={title} style={type=="mobile" ? {width:"40%"}:{}} /></a>
           </div>)
           )}
         </motion.div>

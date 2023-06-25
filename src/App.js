@@ -8,7 +8,7 @@ import Contact from './Components/Contact';
 import TitleHeading from './Components/TitleHeading';
 import Footer from './Components/Footer';
 import Loader from './Components/Loader';
-import './Components/css/normalize.css'
+import './css/normalize.css'
 import { useState,useEffect } from 'react';
 import Education from './Components/Education';
 import education from './Data/education';

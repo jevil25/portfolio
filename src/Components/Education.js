@@ -1,5 +1,5 @@
 import React from 'react';
-import "./css/Education.css"
+import "../css/Education.css"
 
 function Education({ key,college,year,course,marking_scheme }) {
   return (

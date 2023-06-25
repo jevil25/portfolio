@@ -1,6 +1,6 @@
 import React from 'react';
 import SkillsData from '../Data/SkillsData';
-import './css/Skills.css';
+import '../css/Skills.css';
 
 function Skills() {
   return (

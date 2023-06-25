@@ -1,5 +1,5 @@
 const Skills = [
-    "ReactJs","AngularJs","NodeJS","Handlebars"
+    "NextJS","NodeJS","GraphQL","TypeScript","Prisma"
 ]
 
 export default Skills;

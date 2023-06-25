@@ -5,7 +5,7 @@ const portfolioPic = require("../Images/portfolio.png");
 const incrideaClient = require("../Images/incridea-client.png");
 const incrideaServer = require("../Images/incridea-server.png");
 const Vinland = require("../Images/vinland.png");
-const Homify = require("../Images/Homify.png");
+const Homify = require("../Images/homify.jpeg");
 const letter = require("../Images/letter_recognition.png");
 const compiler = require("../Images/compiler.png");
 

@@ -2,7 +2,7 @@ import './App.css';
 import Description from './Components/Description.js';
 import Header from './Components/Header.js'
 import Projects from './Components/Projects'
-import projectdata from './Components/Data/Projectdata'
+import projectdata from './Data/Projectdata'
 import Skills from './Components/Skills'
 import Contact from './Components/Contact';
 import TitleHeading from './Components/TitleHeading';
@@ -11,9 +11,9 @@ import Loader from './Components/Loader';
 import './Components/css/normalize.css'
 import { useState,useEffect } from 'react';
 import Education from './Components/Education';
-import education from './Components/Data/education';
+import education from './Data/education';
 import Experience from './Components/Experience';
-import experience from './Components/Data/experience';
+import experience from './Data/experience';
 // ..
 
 function App() {
@@ -58,6 +58,7 @@ function App() {
                   live={projectdata[i].live}
                   pic={projectdata[i].pic}
                   colors={projectdata[i].technologies_color}
+                  type={projectdata[i].type}
                   />
               ))}
             </div>

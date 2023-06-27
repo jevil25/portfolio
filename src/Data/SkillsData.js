@@ -1,99 +1,148 @@
 const Skills=[
     {
         title:"NextJS",
-        color:"#000000"
+        color:"#000000",
+        type:"framework"
     },
     {
         title:"ReactJS",
-        color:"#5ED4F3"
+        color:"#5ED4F3",
+        type:"framework"
+    },
+    {
+        title:"Android Studio",
+        color:"#3DDC84",
+        type:"framework"
+    },
+    {
+        title:"Cloud Simulator",
+        color:"#F7DF1E",
+        type:"framework"
+    },
+    {
+        title:"OpenGL",
+        color:"#a9b9cf",
+        type:"framework"
+    },
+    {
+        title:"Tensorflow",
+        color:"#f77a11",
+        type:"framework"
+    },
+    {
+        title:"Scikit-Learn",
+        color:"#319ad0",
+        type:"framework"
     },
     {
         title:"AngularJS",
-        color:"#DD0031"
+        color:"#DD0031",
+        type:"framework"
     },
     {
         title:"Python",
-        color:"#FCD12B"
+        color:"#FCD12B",
+        type:"language"
     },
     {
         title:"NodeJS",
-        color:"#539E43"
+        color:"#539E43",
+        type:"framework"
     },
     {
         title:"ExpressJS",
-        color:"#353535"
+        color:"#353535",
+        type:"framework"
     },
     {
         title:"GraphQL",
-        color:"#E10098"
+        color:"#E10098",
+        type:"library"
     },
     {
         title:"Prisma",
-        color:"#0C344B"
+        color:"#0C344B",
+        type:"library"
     },
     {
         title:"PHP",
-        color:"#8892BF"
+        color:"#8892BF",
+        type:"language"
     },
     {
         title:"CSS",
-        color:"#1172B8"
+        color:"#1172B8",
+        type:"language"
     },
     {
         title:"Java",
-        color:"#E76F00"
+        color:"#E76F00",
+        type:"language"
     },
     {
         title:"C/C++",
-        color:"#005697"
+        color:"#005697",
+        type:"language"
     },
     {
         title:"HTML",
-        color:"#F16529"
+        color:"#F16529",
+        type:"language"
     },
     {
         title:"Javascript",
-        color:"#F7DF1E"
+        color:"#F7DF1E",
+        type:"language"
     },
     {
         title:"Bootstrap",
-        color:"#7532FA"
+        color:"#7532FA",
+        type:"library"
     },
     {
         title:"JQuery",
-        color:"#78CFF5"
+        color:"#78CFF5",
+        type:"library"
     },
     {
         title:"MongoDB",
-        color:"#58AA50"
+        color:"#58AA50",
+        type:"database"
     },
     {
         title:"SQL",
-        color:"#000000"
+        color:"#000000",
+        type:"database"
     },
     {
         title:"Vercel",
-        color:"#000000"
+        color:"#000000",
+        type:"tools"
     },
     {
         title:"Heroku",
-        color:"#430098"
+        color:"#430098",
+        type:"tools"
     },
     {
         title:"Netlify",
-        color:"#4d9abf"
+        color:"#4d9abf",
+        type:"tools"
     },
     {
         title:"Git/Github",
-        color:"#09244b"
+        color:"#09244b",
+        type:"tools"
     },
     {
         title:"Firebase",
-        color:"#fcca3f"
+        color:"#fcca3f",
+        type:"tools"
     },
     {
         title:"TailwindCSS",
-        color:"#15b8c5"
+        color:"#15b8c5",
+        type:"library"
     }
 ]
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import './css/Header.css';
+import '../css/Header.css';
 import { useState } from 'react';
-const logoImage = require("./Images/loader.png")
+const logoImage = require("../Images/loader.png")
 
 
 function Header(){

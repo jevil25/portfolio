@@ -1,6 +1,6 @@
-import "./css/Description.css";
+import "../css/Description.css";
 import React,{ useState,useEffect } from "react";
-const profilepic = require("./Images/profilePic4.jpg")
+const profilepic = require("../Images/profilePic4.jpg")
 
 function Description(){
     const [skill,setSkill] = useState(["CSE Engineer","Web Developer","Problem solver","Philomath","Gamer"]);

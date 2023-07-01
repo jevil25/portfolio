@@ -39,7 +39,7 @@ function Projects({ Key,title,description,frameworks,github,live,pic,colors,type
           </div>
           {pic.map((pic)=>
           ( <div className='project_image' style={type=="mobile" ? {textAlign:"center"}:{}}>
-            <a href={live} ><img src={pic} alt={title} style={type=="mobile" ? {width:"40%"}:{}} /></a>
+            <a href={live[0]} ><img src={pic} alt={title} style={type=="mobile" ? {width:"40%"}:{}} /></a>
           </div>)
           )}
         </motion.div>

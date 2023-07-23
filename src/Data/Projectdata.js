@@ -9,6 +9,7 @@ const Homify = require("../Images/homify.jpeg");
 const letter = require("../Images/letter_recognition.png");
 const compiler = require("../Images/compiler.png");
 const salesine = require("../Images/salesine.png");
+const lipread = require("../Images/lipnet.png");
 
 
 const Projectdata = [
@@ -87,6 +88,17 @@ const Projectdata = [
       "live": [""],
       "pic": [Homify],
       "type": "mobile",
+      "technologies_color": ["#5ED4F3", "#fcca3f", "#5ED4F3", "#5ED4F3", "#539E43"]
+    },
+    {
+      "key": 11,
+      "title": "LipRead Machine Learning",
+      "description": "This is a Machine Learning project. This model takes video of person face as input and predicts the word. It uses tensorflow and keras for training the model. It uses Sequential models for trainning and predicting. It used relu and softmax as activation functions. I have used streamlit for frontend it shows how the prediction is done using demo videos.",
+      "Technologies_Used": ["Python", "Tensorflow", "Keras", "Machine Learning","Git"],
+      "github": ["https://github.com/jevil25/Lip-Read-ML-Model"],
+      "live": ["https://lipnet.streamlit.app/"],
+      "pic": [lipread],
+      "type": "Machine Learning",
       "technologies_color": ["#5ED4F3", "#fcca3f", "#5ED4F3", "#5ED4F3", "#539E43"]
     },
     {

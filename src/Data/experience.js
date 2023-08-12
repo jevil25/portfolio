@@ -5,7 +5,7 @@ const experience = [
         designation: "Web Developer",
         duration: "June 2023 - Present",
         description: "Working as a Full Stack Developer in a team. I am working on a sales page which can record zoom meetings send it ai model and give various anlytics and display them such as sentiment analysis, keywords, etc. I am working on the front end of the application using ReactJS and the back end using NodeJS and ExpressJS with MongoDB as the database. I am also working on the deployment of the application using vercel.",
-        certificate: ""
+        certificate: "https://drive.google.com/file/d/1TTbRgzAPnTyaO34V5zTBMWXvm4YkzMcU/view"
     },
     {
         id: 2,

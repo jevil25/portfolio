@@ -4,6 +4,7 @@ const amazonPic = require('../Images/amazon.png');
 const portfolioPic = require("../Images/portfolio.png");
 const incrideaClient = require("../Images/incridea-client.png");
 const incrideaServer = require("../Images/incridea-server.png");
+const incridea2024 = require("../Images/incridea2024.png");
 const Vinland = require("../Images/vinland.png");
 const Homify = require("../Images/homify.jpeg");
 const letter = require("../Images/letter_recognition.png");
@@ -26,8 +27,19 @@ const Projectdata = [
     },
     {
       "Key": 2,
-      "title": "Incridea",
-      "description": "Incridea is a 4-day college fest. This webpage was made for users to login and register for the events. I was given the task to make the admin dashboard which had several features like adding events, deleting events, viewing the registered users, viewing the events, and also updating the events. I also wrote many queries and mutations on the server side. I also made some changes in the authentication part of the webpage.",
+      "title": "Incridea-2024",
+      "description": "Incridea 2024 is a 3 day college fest. This webpage was made for users to login and register for the events. I was given the task to make the admin dashboard which had several features like adding events page, made a xp based game in the website for users to gain and get on top of the leaderboard, also worked on ui and backend schema design along with multiple mutations and queries.",
+      "Technologies_Used": ["NextJS", "NodeJS", "ExpressJS", "ThreeJs", "GraphQL", "Apollo-Client", "JWT", "Bcrypt", "TailwindCSS", "Prisma", "Pothos", "Vercel", "Github"],
+      "github": ["https://github.com/incridea-23/incridea-client", "https://github.com/incridea-23/incridea-server"],
+      "live": ["https://incridea-2024.vercel.app/", "https://incridea-pai3.onrender.com/graphql"],
+      "pic": [incridea2024],
+      "type": "web",
+      "technologies_color": ["#5ED4F3", "#539E43", "#353535", "#1172B8", "#F16529", "#1172B8", "#F7DF1E", "#F16529", "#15b8c5", "#0C344B", "#F16529", "#F16529", "#000000", "#000000"]
+    },
+    {
+      "Key": 3,
+      "title": "Incridea-2023",
+      "description": "Incridea 2023 is a 4 day college fest. This webpage was made for users to login and register for the events. I was given the task to make the admin dashboard which had several features like adding events, deleting events, viewing the registered users, viewing the events, and also updating the events. I also wrote many queries and mutations on the server side. I also made some changes in the authentication part of the webpage.",
       "Technologies_Used": ["NextJS", "NodeJS", "ExpressJS", "MongoDB", "GraphQL", "Apollo-Client", "JWT", "Bcrypt", "TailwindCSS", "Prisma", "Pothos", "Vercel", "Github"],
       "github": ["https://github.com/incridea-23/incridea-client", "https://github.com/incridea-23/incridea-server"],
       "live": ["https://incridea.vercel.app/", "https://incridea.onrender.com/graphql"],
@@ -36,7 +48,7 @@ const Projectdata = [
       "technologies_color": ["#5ED4F3", "#539E43", "#353535", "#1172B8", "#F16529", "#1172B8", "#F7DF1E", "#F16529", "#15b8c5", "#0C344B", "#F16529", "#F16529", "#000000", "#000000"]
     },
     {
-      "Key": 3,
+      "Key": 4,
       "title": "Salesine",
       "description": "Salesine is a website that helps companys to maintain their zoom meets in a more efficent manner. It records the meet and gives them various analytics. It has ai model to process the recordings. It has 2 dashboards one for superadmin and other for the company admin. We have also integrated google Auth for calender and google drive, although with this we have planned to add salesforce crm in this project.",
       "Technologies_Used": ["NextJS", "NodeJS", "ExpressJS", "MongoDB", "Prisma","Google-Auth", "Zoom","AI/ML","JWT", "Vercel", "Github"],
@@ -47,7 +59,7 @@ const Projectdata = [
       "technologies_color": ["#5ED4F3", "#539E43", "#353535", "#1172B8", "#F16529", "#1172B8", "#F7DF1E", "#F16529", "#15b8c5", "#0C344B", "#F16529", "#F16529", "#000000", "#000000"]
     },
     {
-      "key": 4,
+      "key": 5,
       "title": "Cadenza",
       "description": "I had the most fun while developing this webpage. It's similar to Spotify but with a few fewer features. I developed this webpage using HTML, CSS, JavaScript, Handlebars, Node.js, and SQL. This webpage allows the admin to add and delete songs as well. Users can listen to songs and get the lyrics based on top charts or artists available.",
       "Technologies_Used": ["HTML", "CSS", "Javascript", "Handlebars", "NodeJS", "ExpressJS", "SQL"],
@@ -58,7 +70,7 @@ const Projectdata = [
       "technologies_color": ["#F16529", "#1172B8", "#F7DF1E", "#1172B8", "#539E43", "#353535", "#58AA50"]
     },
     {
-      "key": 5,
+      "key": 6,
       "title": "Foodism.com",
       "description": "Foodism.com is a webpage which allows the user to upload their personal recipes and view others' recipes as well. It allows users to choose recipes based on continents or view all the recipes at once.",
       "Technologies_Used": ["HTML", "CSS", "Javascript", "Handlebars", "NodeJS", "ExpressJS", "MongoDB", "API"],
@@ -69,7 +81,7 @@ const Projectdata = [
       "technologies_color": ["#F16529", "#1172B8", "#F7DF1E", "#1172B8", "#539E43", "#353535", "#58AA50"]
     },
     {
-      "Key": 6,
+      "Key": 7,
       "title": "Amazon Clone",
       "description": "This webpage is an Amazon clone that I made as my initial ReactJS project to strengthen my basic concepts. It is a replica of the Amazon page and includes a payment feature implemented using Firebase Authentication. It also uses Firestore as its database and is deployed using Firebase as well.",
       "Technologies_Used": ["ReactJS", "Firebase", "Firestore", "NodeJS", "ExpressJS"],
@@ -80,7 +92,7 @@ const Projectdata = [
       "technologies_color": ["#5ED4F3", "#fcca3f", "#5ED4F3", "#5ED4F3", "#539E43"]
     },
     {
-      "Key": 7,
+      "Key": 8,
       "title": "Homify",
       "description": "This is Android Mobile App. Used to give users important updates. It has features like store important document id and expriy date, store important contacts, and also has a feature to add grocery list. It also has a feature to set reminders for the documents and contacts.",
       "Technologies_Used": ["JAVA", "Android Studio", "API", "Mobile App","Git"],
@@ -102,7 +114,7 @@ const Projectdata = [
       "technologies_color": ["#5ED4F3", "#fcca3f", "#5ED4F3", "#5ED4F3", "#539E43"]
     },
     {
-      "Key": 8,
+      "Key": 10,
       "title": "Letter Recognition",
       "description": "This is a Machine Learning project. It is used to recognize the letters. It uses Algorithms like KNN, SVM, and Random Forest. It takes 16 features as input and predicts the letter.",
       "Technologies_Used": ["Python", "Sciket-learn", "Machine Learning", "Data Preprocssing","Git"],
@@ -124,7 +136,7 @@ const Projectdata = [
       "technologies_color": ["#5ED4F3", "#fcca3f", "#5ED4F3", "#5ED4F3", "#539E43"]
     },
     {
-      "Key": 10,
+      "Key": 12,
       "title": "Cloud Compiler",
       "description": "This is a java cloud sim based program. It is used to compile and run the code. It has features like compile and run the code. It gives proper error messages and gives proper ouput. It suports multiple programming languages. It can also take live user input.",
       "Technologies_Used": ["JAVA", "Cloud Sim", "C/C++", "Scheduling Algorithms","Git"],

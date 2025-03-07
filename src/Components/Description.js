@@ -1,6 +1,6 @@
 import "../css/Description.css";
 import React,{ useState,useEffect } from "react";
-const profilepic = require("../Images/profilePic4.jpg")
+import coder from "../Images/result.svg";
 
 function Description(){
     const [skill,setSkill] = useState(["CSE Engineer","Web Developer","Problem solver","Philomath","Gamer"]);
@@ -43,7 +43,7 @@ function Description(){
             </p>
         </div>
         <div className="profile_img">
-            <img src={profilepic} alt="" />
+            <img src = {coder} alt="coder" width={500} height={500} />
         </div>
     </div>
     </>

@@ -91,6 +91,11 @@
     height: auto;
 }
 
+.projectDes {
+    text-align: left;
+    padding: 1.25rem;
+}
+
 @media screen and (max-width: 768px) {
     .projects{
         width: 80vw;
@@ -112,15 +117,21 @@
     .projectDes{
         flex-basis: 100%;
         position: relative;
-        left: 0px;
-        z-index: 2;
-        padding:20px;
-        margin-top:0px;
+        left: 0;
+        padding: 1.25rem;
+        margin: 0.5rem 0;
         border-radius: 4px;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         box-shadow: none;
+        text-align: left;
     }
     .projectList li{
         font-size: small;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projectDes {
+        padding: 1rem;
+        font-size: 0.9rem;
     }
 }

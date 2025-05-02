@@ -151,23 +151,28 @@
 @media screen and (max-width: 768px) {
     #Description {
         grid-template-columns: 1fr;
-        text-align: center;
+        text-align: left;
         gap: 3rem;
         margin: 2rem 1rem;
         padding: 0 1rem;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 1.5rem;
     }
 
     #Description p {
-        margin: 1.5rem auto;
+        margin: 1.5rem 0;
+        text-align: left;
     }
 
     .main-h1 {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .profile_img {
         grid-row: 1;
         margin-top: 2rem;
+        justify-content: center;
     }
 
     .profile_img img {
@@ -176,8 +181,16 @@
 }
 
 @media screen and (max-width: 480px) {
+    #Description {
+        margin: 2rem 0.5rem;
+        padding: 0 0.75rem;
+        margin: 2rem 0;
+        padding: 0 1rem;
+    }
+
     #Description h1 {
         font-size: 2rem;
+        text-align: left;
     }
 
     .mov-text {
@@ -187,6 +200,17 @@
     #Description p {
         font-size: 1rem;
         width: 100%;
+        text-align: left;
+        margin: 1.25rem 0;
+    }
+
+    #Description span {
+        text-align: left;
+        display: block;
+    }
+
+    .profile_img {
+        margin: 1rem 0;
     }
 }
 

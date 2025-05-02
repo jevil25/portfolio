@@ -1,5 +1,30 @@
 const Skills=[
     {
+        title:"PySpark",
+        color:"#E25A1C",
+        type:"framework"
+    },
+    {
+        title:"Databricks",
+        color:"#FF3621",
+        type:"tools"
+    },
+    {
+        title:"Kotlin",
+        color:"#7F52FF",
+        type:"language"
+    },
+    {
+        title:"Spring Boot",
+        color:"#6DB33F",
+        type:"framework"
+    },
+    {
+        title:"TypeScript",
+        color:"#3178C6",
+        type:"language"
+    },
+    {
         title:"NextJS",
         color:"#000000",
         type:"framework"

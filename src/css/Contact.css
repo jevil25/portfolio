@@ -1,10 +1,13 @@
-.Contact{
-    margin-left: 45px;
-    margin-bottom: 20px;
+.Contact {
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 2rem;
     display: grid;
-    grid-template-columns: 350px 1fr;
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    background-color: rgba(30, 41, 59, 0.3);
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
 }
 
 .Contact input{
@@ -15,27 +18,33 @@
     margin-top: 4px;
 }
 
-.Contact1{
-    max-width: 250px;
-}
-
-.form-label,.message{
-    font-size: large;
-    margin-right: 10px;
-    margin-bottom: 5px;
-}
-
-.form-row input,textarea{
+.Contact1 {
     width: 100%;
-    margin-bottom: 20px;
-    padding: 0.35rem 0.75rem;
-    border: transparent;
-    background-color: #101318;
+    max-width: 500px;
 }
 
-.form-row input,textarea:active{
-    background-color: #101318;
-    border: transparent;
+.form-label, .message {
+    color: #e2e8f0;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-row input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(226, 232, 240, 0.1);
+    border-radius: 8px;
+    color: #e2e8f0;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.form-row input:focus, textarea:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
 }
 
 .contact2{
@@ -43,35 +52,62 @@
     bottom: 10px;    
 }
 
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-info h2 {
+    color: #60a5fa;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
 .contact-info p{
     margin-left: 30px;
 }
 
-.contact-info i{
-    color: #CCD6F6;
-    margin-right: 15px;
+.contact-info i {
+    font-size: 1.25rem;
+    color: #60a5fa;
 }
 
-.contact-info a{
+.contact-info a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #e2e8f0;
     text-decoration: none;
-    color: #50CBB3;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #60a5fa;
+    transform: translateX(4px);
 }
 
 .contact-info p{
     font-size: larger;
 }
 
-.btn-block{
-    width:150px;
-    height: 35px;
-    margin-top: 30px;
-    border-radius: 15px;
-    background-color: #CCD6F6;
+.btn-block {
+    background-color: #60a5fa;
+    color: #0f172a;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;
+    min-width: 150px;
 }
 
-.btn-block:hover{
-    background-color: #adb7da;
-    cursor: pointer;
+.btn-block:hover {
+    background-color: #3b82f6;
+    transform: translateY(-2px);
 }
 
 .Contact input:focus,textarea:focus{
@@ -80,6 +116,57 @@
 
 .Contact input,textarea{
     color: #CCD6F6;
+}
+
+.success-message {
+    background: rgba(96, 165, 250, 0.1);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    color: #60a5fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.btn-block:disabled {
+    background-color: rgba(96, 165, 250, 0.5);
+    cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-input:focus, .from-textarea:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+}
+
+.form-input:required:invalid:focus, .from-textarea:required:invalid:focus {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+    .Contact {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .Contact1 {
+        margin: 0 auto;
+    }
+    
+    .contact-info {
+        text-align: center;
+    }
+    
+    .contact-info a {
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width:700px) {

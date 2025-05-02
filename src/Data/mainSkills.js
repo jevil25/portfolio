@@ -1,5 +1,5 @@
 const Skills = [
-    "NextJS","NodeJS","GraphQL","TypeScript","Prisma"
+    "PySpark", "Kotlin", "Spring Boot", "TypeScript", "NextJS"
 ]
 
 export default Skills;

@@ -1,41 +1,53 @@
-import React,{ useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import "../css/Contact.css";
 import emailjs from "@emailjs/browser";
 
 function Contact() {
   const form = useRef();
+  const [showMessage, setShowMessage] = useState(false);
+  const [sending, setSending] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setSending(true);
 
     emailjs.sendForm('service_j3rx5lf', 'template_hhuwv8s', form.current, 'AYg12w0x7Ax9ElCjN')
       .then((result) => {
-          // console.log(result.text);
+        setShowMessage(true);
+        setSending(false);
+        e.target.reset();
+        setTimeout(() => {
+          setShowMessage(false);
+        }, 5000); // Hide message after 5 seconds
       }, (error) => {
-          console.log(error.text);
+        console.log(error.text);
+        setSending(false);
       });
-      e.target.reset();
   };
 
   return (
     <div data-aos="fade-up" data-aos-duration="1000" className="Contact">
       <form ref={form} onSubmit={sendEmail} className='Contact1'>
         <div className="form-row">
-          <label for="name" className="form-label">Your Name</label>
-          <input type="text" name="fname" id="name" class="form-input" />
+          <label htmlFor="name" className="form-label">Your Name</label>
+          <input type="text" name="fname" id="name" className="form-input" required />
         </div>
         <div className="form-row">
-          <label for="email" className="form-label">Your Email</label>
-          <input type="email" name="user_email" id="email" className="form-input" />
+          <label htmlFor="email" className="form-label">Your Email</label>
+          <input type="email" name="user_email" id="email" className="form-input" required />
         </div>
         <div className="form-row">
-          <label for="message" className="message">Message</label>
-          <textarea name="message" id="message" className="from-textarea"></textarea>
+          <label htmlFor="message" className="message">Message</label>
+          <textarea name="message" id="message" className="from-textarea" required></textarea>
         </div>
-        <input type="hidden" name="_next" value="http://localhost:3000/" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table"/>
-        <button type="submit" className="btn btn-block">Submit</button>
+        <button type="submit" className="btn btn-block" disabled={sending}>
+          {sending ? 'Sending...' : 'Submit'}
+        </button>
+        {showMessage && (
+          <div className="success-message">
+            Message sent successfully! I'll get back to you soon.
+          </div>
+        )}
       </form>
       <div className='contact2'>
         <article class="contact-info">
@@ -47,7 +59,7 @@ function Contact() {
         </article>
       </div>
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

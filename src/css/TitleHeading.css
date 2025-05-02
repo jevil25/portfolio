@@ -1,33 +1,52 @@
-.projectHeading{
-    display: grid;
-    grid-template-columns: auto 1fr;
+.projectHeading {
+    display: flex;
     align-items: center;
     gap: 1.5rem;
-    margin-left: 30px;
+    margin: 4rem 2rem 2rem;
 }
 
-.projectHeading div{
-    height: 2px;
-    background-color: #CCD6F6;
-    width: 75vw;
+.projectHeading h1 {
+    font-size: 2rem;
+    color: #60a5fa;
+    white-space: nowrap;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.projectHeading h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(to right, #60a5fa, transparent);
+    border-radius: 2px;
+}
+
+.projectHeading div {
+    height: 1px;
+    background: linear-gradient(to right, #60a5fa20, #60a5fa05);
+    width: 100%;
+    border-radius: 1px;
 }
 
 @media screen and (max-width:800px) {
-    .projectHeading div{
-        width: 95vw;
+    .projectHeading {
+        margin: 3rem 1.5rem 1.5rem;
+    }
+    
+    .projectHeading h1 {
+        font-size: 1.75rem;
     }
 }
 
 @media screen and (max-width:500px) {
-    .projectHeading div{
-        width: 50vw;
+    .projectHeading {
+        margin: 2rem 1rem 1rem;
     }
 
-    .projectHeading{
-        margin-left: 20px;
-    }
-
-    .projectHeading h1{
-        font-size: xx-large;
+    .projectHeading h1 {
+        font-size: 1.5rem;
     }
 }

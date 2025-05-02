@@ -1,39 +1,112 @@
-.experience{
-    padding: 20px;
-    margin-right: 20px;
-    margin-bottom: 0px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 40px;
+.experience {
+    padding: 2rem;
+    margin: 2rem 3rem;
+    border-radius: 12px;
+    background-color: rgba(30, 41, 59, 0.3);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease;
 }
 
-.experienceHeading{
-    font-size: 30px;
+.experience:hover {
+    transform: translateY(-4px);
+}
+
+.experienceHeading h3 {
+    font-size: 1.75rem;
     font-weight: 600;
-    color: #50cbb3;
+    color: #60a5fa;
+    margin-bottom: 1rem;
 }
 
-.expdescription h4{
-    margin-top: 0px;
-    margin-bottom: 3px;
-    font-size: 25px;
+.expdescription h4 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
     font-weight: 600;
+    color: #e2e8f0;
 }
 
-.certification a{
+.expdescription h5 {
+    color: #94a3b8;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.expdescription p {
+    color: #94a3b8;
+    line-height: 1.7;
+    white-space: pre-line;
+    margin: 1rem 0;
+}
+
+.certification {
+    margin-top: 1rem;
+}
+
+.certification pre {
+    margin: 0;
+    font-family: inherit;
+}
+
+.certification a {
     text-decoration: none;
-    color: #ccd3eb;
-    text-decoration: underline;
+    color: #60a5fa;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.certification a:hover{
-    color: #50cbb3;
+.certification a:hover {
+    color: #93c5fd;
+}
+
+.certification a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #60a5fa;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.certification a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@media screen and (max-width: 768px) {
+    .experience {
+        padding: 1.5rem;
+        margin: 1.5rem;
+    }
+    
+    .experienceHeading h3 {
+        font-size: 1.5rem;
+    }
+    
+    .expdescription h4 {
+        font-size: 1.25rem;
+    }
 }
 
 @media screen and (max-width: 500px) {
-    .experience{
-        margin-left: 0px;
+    .experience {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    .experienceHeading h3 {
+        font-size: 1.25rem;
+    }
+    
+    .expdescription h4 {
+        font-size: 1.1rem;
+    }
+    
+    .expdescription p {
+        font-size: 0.875rem;
     }
 }

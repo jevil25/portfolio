@@ -37,6 +37,19 @@ function App() {
       <Header />
         <Description />
         <TitleHeading 
+            title="Experience"
+          />
+        {Array(experience.length).fill().map((_,i)=>(
+                <Experience
+                  Key={experience[i].Key}
+                  company={experience[i].company}
+                  designation={experience[i].designation}
+                  duration={experience[i].duration}
+                  description={experience[i].description}
+                  certificate={experience[i].certificate}
+                  />
+          ))} 
+        <TitleHeading 
             title="Projects"
           />
           <div className="projectType">
@@ -64,19 +77,6 @@ function App() {
             </div>
               <h3 class="apph3">For more projects visit my github repo's here: <p><a href="https://github.com/jevil25"><i class="fa-brands fa-github"></i>jevil25</a></p></h3>
           <TitleHeading 
-            title="Experience"
-          />
-        {Array(experience.length).fill().map((_,i)=>(
-                <Experience
-                  Key={experience[i].Key}
-                  company={experience[i].company}
-                  designation={experience[i].designation}
-                  duration={experience[i].duration}
-                  description={experience[i].description}
-                  certificate={experience[i].certificate}
-                  />
-          ))} 
-        <TitleHeading 
             title="Education"
           />
         {Array(education.length).fill().map((_,i)=>(

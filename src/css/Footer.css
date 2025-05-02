@@ -1,21 +1,58 @@
-.Footer{
+.Footer {
     text-align: center;
-    margin: 5px 0px;
-    border-top: 1px solid rgba(98, 91, 91, 0.662);
+    padding: 2rem 0;
+    margin-top: 4rem;
+    background: linear-gradient(to bottom, transparent, rgba(30, 41, 59, 0.3));
+    backdrop-filter: blur(8px);
 }
 
-.Footer span{
-    color: #50CBB3;
+.Footer h4 {
+    color: #94a3b8;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.Footer span {
+    color: #60a5fa;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.Footer span:hover {
+    color: #93c5fd;
+}
+
+.Footer span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #60a5fa;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.Footer span:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 @media screen and (max-width:800px) {
-    .Footer{
-        font-size: medium;
+    .Footer {
+        padding: 1.5rem 0;
     }
 }
 
 @media screen and (max-width:500px) {
-    .Footer{
-        font-size: small;
+    .Footer {
+        padding: 1rem 0;
+    }
+    
+    .Footer h4 {
+        font-size: 0.875rem;
     }
 }

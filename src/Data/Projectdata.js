@@ -16,8 +16,8 @@ const lipread = require("../Images/lipnet.png");
 const Projectdata = [
     {
       "Key": 1,
-      "title": "Aaron Nazareth(Portfolio)",
-      "description": "This is my most favorite and the first page that I built using ReactJS. This shows all my skills and projects. Do keep visiting it for my future projects. This helped me understand React hooks in a much better manner. I would love to improve this project even more by constantly adding more features to it.",
+      "title": "Aaron Nazareth (Portfolio)",
+      "description": "A modern, responsive portfolio website built with React.js, featuring dynamic content sections and smooth animations. Implemented using React hooks for state management and AOS for scroll-based animations. The site showcases projects, skills, and experience with an intuitive user interface and seamless navigation.",
       "Technologies_Used": ["ReactJS", "Github", "vercel", "Javascript", "React-hooks", "Aos-Animation"],
       "github": ["https://github.com/jevil25/portfolio"],
       "live": ["https://aaronnazareth.vercel.app/"],
@@ -28,7 +28,7 @@ const Projectdata = [
     {
       "Key": 2,
       "title": "Incridea-2024",
-      "description": "Incridea 2024 is a 3 day college fest. This webpage was made for users to login and register for the events. I was given the task to make the admin dashboard which had several features like adding events page, made a xp based game in the website for users to gain and get on top of the leaderboard, also worked on ui and backend schema design along with multiple mutations and queries.",
+      "description": "Developed a comprehensive event management platform for Incridea 2024, a major college festival. Architected and implemented an admin dashboard with advanced features including event management, XP-based gamification system, and user leaderboard. Utilized GraphQL for efficient data querying and ThreeJS for interactive 3D elements.\n\nKey Features:\n• Custom admin dashboard for event management\n• XP-based gaming system with leaderboard\n• Robust authentication using JWT and Bcrypt\n• GraphQL API with Pothos schema builder\n• Responsive UI with TailwindCSS",
       "Technologies_Used": ["NextJS", "NodeJS", "ExpressJS", "ThreeJs", "GraphQL", "Apollo-Client", "JWT", "Bcrypt", "TailwindCSS", "Prisma", "Pothos", "Vercel", "Github"],
       "github": ["https://github.com/incridea-23/incridea-client", "https://github.com/incridea-23/incridea-server"],
       "live": ["https://incridea-2024.vercel.app/", "https://incridea-pai3.onrender.com/graphql"],
@@ -39,7 +39,7 @@ const Projectdata = [
     {
       "Key": 3,
       "title": "Incridea-2023",
-      "description": "Incridea 2023 is a 4 day college fest. This webpage was made for users to login and register for the events. I was given the task to make the admin dashboard which had several features like adding events, deleting events, viewing the registered users, viewing the events, and also updating the events. I also wrote many queries and mutations on the server side. I also made some changes in the authentication part of the webpage.",
+      "description": "Built a full-stack event management system for Incridea 2023, featuring comprehensive admin controls and user registration functionality. Implemented GraphQL API architecture with optimized queries and mutations for efficient data handling.\n\nKey Features:\n• Advanced admin dashboard with CRUD operations\n• Real-time event management and user tracking\n• Secure authentication system\n• GraphQL-powered data layer with Prisma ORM\n• Responsive design with TailwindCSS",
       "Technologies_Used": ["NextJS", "NodeJS", "ExpressJS", "MongoDB", "GraphQL", "Apollo-Client", "JWT", "Bcrypt", "TailwindCSS", "Prisma", "Pothos", "Vercel", "Github"],
       "github": ["https://github.com/incridea-23/incridea-client", "https://github.com/incridea-23/incridea-server"],
       "live": ["https://incridea.vercel.app/", "https://incridea.onrender.com/graphql"],
@@ -50,7 +50,7 @@ const Projectdata = [
     {
       "Key": 4,
       "title": "Salesine",
-      "description": "Salesine is a website that helps companys to maintain their zoom meets in a more efficent manner. It records the meet and gives them various analytics. It has ai model to process the recordings. It has 2 dashboards one for superadmin and other for the company admin. We have also integrated google Auth for calender and google drive, although with this we have planned to add salesforce crm in this project.",
+      "description": "Engineered an AI-powered meeting analytics platform that revolutionizes how companies manage and analyze Zoom meetings. The system automatically processes recordings to generate valuable insights and analytics.\n\nKey Features:\n• Dual dashboard system for super-admin and company management\n• AI-powered meeting recording analysis\n• Google Calendar and Drive integration\n• Secure authentication with role-based access\n• Scalable backend with MongoDB and Prisma",
       "Technologies_Used": ["NextJS", "NodeJS", "ExpressJS", "MongoDB", "Prisma","Google-Auth", "Zoom","AI/ML","JWT", "Vercel", "Github"],
       "github": ["https://github.com/jevil25/salesine", "https://github.com/jevil25/salestine_server"],
       "live": ["https://salestine.vercel.app/", "https://salestine.onrender.com/"],
@@ -61,7 +61,7 @@ const Projectdata = [
     {
       "key": 5,
       "title": "Cadenza",
-      "description": "I had the most fun while developing this webpage. It's similar to Spotify but with a few fewer features. I developed this webpage using HTML, CSS, JavaScript, Handlebars, Node.js, and SQL. This webpage allows the admin to add and delete songs as well. Users can listen to songs and get the lyrics based on top charts or artists available.",
+      "description": "Developed a full-featured music streaming platform inspired by Spotify, incorporating modern web technologies for seamless audio playback and content management.\n\nKey Features:\n• Custom audio player with playlist management\n• Admin panel for music content management\n• Real-time lyrics synchronization\n• SQL database for efficient data management\n• RESTful API architecture with Express.js",
       "Technologies_Used": ["HTML", "CSS", "Javascript", "Handlebars", "NodeJS", "ExpressJS", "SQL"],
       "github": ["https://github.com/jevil25/cadenza"],
       "live": ["https://cadenza.vercel.app/"],
@@ -72,7 +72,7 @@ const Projectdata = [
     {
       "key": 6,
       "title": "Foodism.com",
-      "description": "Foodism.com is a webpage which allows the user to upload their personal recipes and view others' recipes as well. It allows users to choose recipes based on continents or view all the recipes at once.",
+      "description": "Created an interactive recipe sharing platform that enables users to discover and share culinary experiences from around the world. The platform features a continent-based recipe categorization system and user-generated content.\n\nKey Features:\n• User recipe upload and management\n• Geographic-based recipe categorization\n• Interactive recipe viewing interface\n• MongoDB integration for flexible data storage\n• RESTful API implementation",
       "Technologies_Used": ["HTML", "CSS", "Javascript", "Handlebars", "NodeJS", "ExpressJS", "MongoDB", "API"],
       "github": ["https://github.com/jevil25/Foodism.com"],
       "live": ["https://foodism-com.vercel.app/"],
@@ -83,7 +83,7 @@ const Projectdata = [
     {
       "Key": 7,
       "title": "Amazon Clone",
-      "description": "This webpage is an Amazon clone that I made as my initial ReactJS project to strengthen my basic concepts. It is a replica of the Amazon page and includes a payment feature implemented using Firebase Authentication. It also uses Firestore as its database and is deployed using Firebase as well.",
+      "description": "Engineered a comprehensive e-commerce platform replicating Amazon's core functionalities. Implemented Firebase Authentication and Firestore for secure user management and real-time data storage.\n\nKey Features:\n• User authentication and authorization\n• Real-time shopping cart updates\n• Secure payment processing\n• Responsive product catalog\n• Firebase-powered backend",
       "Technologies_Used": ["ReactJS", "Firebase", "Firestore", "NodeJS", "ExpressJS"],
       "github": ["https://github.com/jevil25/Amazon-clone-using-react"],
       "live": [""],
@@ -94,7 +94,7 @@ const Projectdata = [
     {
       "Key": 8,
       "title": "Homify",
-      "description": "This is Android Mobile App. Used to give users important updates. It has features like store important document id and expriy date, store important contacts, and also has a feature to add grocery list. It also has a feature to set reminders for the documents and contacts.",
+      "description": "Developed a comprehensive Android application for personal information management and organization. The app helps users track important documents, contacts, and daily necessities.\n\nKey Features:\n• Document expiration tracking and notifications\n• Contact management system\n• Interactive grocery list functionality\n• Smart reminder system\n• Intuitive user interface",
       "Technologies_Used": ["JAVA", "Android Studio", "API", "Mobile App","Git"],
       "github": ["https://github.com/Amith-Jagannath/Homify"],
       "live": [""],
@@ -105,7 +105,7 @@ const Projectdata = [
     {
       "key": 11,
       "title": "LipRead Machine Learning",
-      "description": "This is a Machine Learning project. This model takes video of person face as input and predicts the word. It uses tensorflow and keras for training the model. It uses Sequential models for trainning and predicting. It used relu and softmax as activation functions. I have used streamlit for frontend it shows how the prediction is done using demo videos.",
+      "description": "Implemented a sophisticated machine learning model for lip reading using deep learning techniques. The system processes video input to predict spoken words with high accuracy.\n\nKey Features:\n• Video processing pipeline for face detection\n• Deep learning model using TensorFlow and Keras\n• Sequential model architecture with ReLU/Softmax\n• Interactive demo using Streamlit\n• Real-time prediction capabilities",
       "Technologies_Used": ["Python", "Tensorflow", "Keras", "Machine Learning","Git"],
       "github": ["https://github.com/jevil25/Lip-Read-ML-Model"],
       "live": ["https://lipnet.streamlit.app/"],
@@ -116,7 +116,7 @@ const Projectdata = [
     {
       "Key": 10,
       "title": "Letter Recognition",
-      "description": "This is a Machine Learning project. It is used to recognize the letters. It uses Algorithms like KNN, SVM, and Random Forest. It takes 16 features as input and predicts the letter.",
+      "description": "Designed and implemented a machine learning system for letter recognition using multiple algorithms. The system processes 16 distinct features to accurately classify letters.\n\nKey Features:\n• Multiple algorithm implementation (KNN, SVM, Random Forest)\n• Feature extraction and preprocessing pipeline\n• Comparative analysis of algorithm performance\n• Optimized model parameters\n• Robust testing framework",
       "Technologies_Used": ["Python", "Sciket-learn", "Machine Learning", "Data Preprocssing","Git"],
       "github": ["https://github.com/jevil25/letter-recognition-using-ml"],
       "live": [""],
@@ -127,7 +127,7 @@ const Projectdata = [
     {
       "Key": 9,
       "title": "Vinland Island",
-      "description": "This is 2D Island made used Open GL. It has 3 views of the Island. It has various shops, people moving , and many more secenry features.",
+      "description": "Created an immersive 2D island environment using OpenGL, featuring dynamic scenes and interactive elements.\n\nKey Features:\n• Multiple view perspectives of the island\n• Animated character movements\n• Interactive shop interfaces\n• Dynamic scenery elements\n• Custom animation system",
       "Technologies_Used": ["C/C++", "OpenGL", "freeGlut", "Designing","Animation"],
       "github": ["https://github.com/jevil25/The-Island-OpenGL"],
       "live": [""],
@@ -138,7 +138,7 @@ const Projectdata = [
     {
       "Key": 12,
       "title": "Cloud Compiler",
-      "description": "This is a java cloud sim based program. It is used to compile and run the code. It has features like compile and run the code. It gives proper error messages and gives proper ouput. It suports multiple programming languages. It can also take live user input.",
+      "description": "Developed a cloud-based compilation system using Java CloudSim framework. The platform supports multiple programming languages and provides real-time compilation services.\n\nKey Features:\n• Multi-language compilation support\n• Real-time error handling and output generation\n• Interactive input capability\n• Efficient resource scheduling\n• Scalable cloud architecture",
       "Technologies_Used": ["JAVA", "Cloud Sim", "C/C++", "Scheduling Algorithms","Git"],
       "github": ["https://github.com/jevil25/cloud_Compiler"],
       "live": [""],

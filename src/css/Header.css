@@ -4,13 +4,17 @@ html{
 }    
 
 body{
-    background-color: #0A192F;
-    color: #CCD6F6;
+    background-color: #0f172a;
+    color: #e2e8f0;
     font-style: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
 }
 
 .header{
-    background-color: #0A192F;
+    background-color: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .navbar{
@@ -43,8 +47,8 @@ body{
 }
 
 .navlist a:hover{
-    color: #50CBB3;
-    border-bottom: #50CBB3 2px solid;
+    color: #60a5fa;
+    border-bottom: #60a5fa 2px solid;
 }
 
 .navlist{
@@ -58,18 +62,19 @@ body{
 
 .navlist a,.navResume a{
     text-decoration: none;
-    color: #CCD6F6;
+    color: #e2e8f0;
 }
 
 .navResume a{
-    color: #50CBB3;
+    color: #60a5fa;
     border-radius: 20px;
     padding: 8px 16px;
-    border: 1px solid #50CBB3;
+    border: 1px solid #60a5fa;
+    transition: all 0.3s ease;
 }
 
 .navResume a:hover{
-    background-color: #1e3251;
+    background-color: rgba(96, 165, 250, 0.1);
 }
 
 .navResume a{
@@ -187,5 +192,4 @@ a.AJN:hover{
     body {
         zoom: 1;
       }
-}   
-    
+}

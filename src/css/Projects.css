@@ -1,175 +1,227 @@
-.projects{
-    border-radius: 20px;
-    cursor: pointer;
-    margin-left: 40px;
-    margin-right: 40px;
+.projects {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(96, 165, 250, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 2rem;
+    position: relative;
+    overflow: hidden;
 }
 
-.width{
+.projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.3), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.projects:hover::before {
+    transform: translateX(100%);
+}
+
+.projects:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
+    border-color: rgba(96, 165, 250, 0.2);
+}
+
+.width {
     width: 100%;
 }
 
-.project1{
-    flex-basis: 50%;
+.project1 {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project_body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     align-items: center;
-    justify-content: center;
 }
 
-.project_body{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-items: center;
-    padding: 10px;
+.project_image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-
-.project_image{
-    flex-basis: 60%;
-    z-index:1;
-}
-
-.project_image img{
+.project_image img {
     width: 100%;
-    height: 100%;
-    border-radius: 20px;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(0.9);
 }
 
-.projecttitle{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    color: #ccd6f6;
-    font-size: 30px;
-    font-weight: bold;
-    margin:10px;
-    padding-bottom: 10px;
-    border-bottom: #ccd6f6;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
+.projects:hover .project_image img {
+    transform: scale(1.03);
+    filter: brightness(1);
 }
 
-.hideDes{
+.projecttitle {
+    font-size: 1.875rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #60a5fa, #93c5fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.projecttitle::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #60a5fa20, transparent);
+}
+
+.hideDes {
     display: none;
     visibility: hidden;
 }
 
-.showDes{
-    display:flex;
+.showDes {
+    display: flex;
     visibility: visible;
 }
 
-.projectList{
-    display:flex;
-    flex-direction: row;
+.projectList {
+    display: flex;
     flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
 }
 
-.projectTech{
+.projectTech {
     position: relative;
     left: 30px;
     z-index: 3;
 }
 
-.projectLinks{
+.projectLinks {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 10px;
-    color:#ccd6f6;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
-.projectStack{
+.projectLinks a {
+    color: #60a5fa;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.projectLinks a:hover {
+    color: #93c5fd;
+    transform: translateY(-2px);
+}
+
+.projectStack {
     color: #ccd6f6;
     margin: 20px;
     margin-left: 15px;
     font-size: larger;
 }
 
-.projectList li{
+.projectList li {
     list-style-type: none;
     list-style: none;
     color: #ccd6f6;
     font-size: 18px;
 }
 
-.projectLinks{
-    text-align: left;
+.each_skill2 {
+    background: rgba(96, 165, 250, 0.1);
+    color: #60a5fa;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    transition: all 0.3s ease;
 }
 
-.projectLinks a{
-    color: #ccd6f6;
-    font-size: x-large;
+.each_skill2:hover {
+    background: rgba(96, 165, 250, 0.2);
+    transform: translateY(-2px);
+    cursor: pointer;
 }
 
-.each_skill2{
-    list-style: none;
-    text-align: center;
-    color: #ccd6f6;
-    height: auto;
-    margin-left: 20px;
-}
-
-.projectDes{
-    color: #ccd6f6;
-    font-size: medium;
+.projectDes {
+    color: #94a3b8;
+    line-height: 1.8;
+    font-size: 1rem;
     text-align: left;
     background-color: #112240;
     flex-basis: 60%;
     position: relative;
     left: 30px;
     z-index: 2;
-    padding:25px;
+    padding: 25px;
     border-radius: 4px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 1rem 0;
 }
 
 @media screen and (max-width: 768px) {
-     /* make it responsive image on top and text below and center after that skills then link */
-    .project_body{
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-items: center;
-        margin-left: 0px;
-        margin-right: 0px;
+    .projects {
+        padding: 1.5rem;
+        margin: 1rem;
     }
 
-    .projectDes{
-        flex-basis: 100%;
-        position: relative;
-        left: 0px;
-        z-index: 2;
-        padding:20px;
-        margin-top:0px;
-        border-radius: 4px;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        box-shadow: none;
+    .project_body {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
-    .projectTech{
+    .project1 {
+        order: 2;
+    }
+
+    .project_image {
+        order: 1;
+    }
+
+    .projecttitle {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .projectDes {
+        text-align: center;
+    }
+
+    .projectTech {
         position: relative;
         left: 0px;
         z-index: 3;
     }
 
-    .projectList{
-        display:flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
+    .projectList {
+        justify-content: center;
     }
 
-    .project1{
+    .projectLinks {
+        justify-content: center;
+    }
+
+    .project1 {
         background-color: #112240;
         border-radius: 4px;
         margin-top: 15px;
     }
-
 }

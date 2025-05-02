@@ -1,55 +1,88 @@
-.each_skill{
+.skills {
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.each_skill {
     list-style: none;
-    margin-right: 10px;
-    text-align: center;
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    color: #94a3b8;
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(96, 165, 250, 0.1);
+    transition: all 0.3s ease;
     display: flex;
-    justify-content: center;
     align-items: center;
-    border-radius: 30px;
-    color: white;
+    justify-content: center;
+    font-size: 0.95rem;
+    backdrop-filter: blur(8px);
 }
 
-.skills_title{
-    font-size: 1.5rem;
+.each_skill:hover {
+    transform: translateY(-2px);
+    color: #60a5fa;
+    border-color: rgba(96, 165, 250, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: rgba(30, 41, 59, 0.6);
+    cursor: pointer;
+}
+
+.skills_title {
+    font-size: 1.75rem;
     font-weight: 600;
-    margin: 10px 35px;
+    margin: 3rem 0 1.5rem;
+    color: #60a5fa;
+    position: relative;
+    padding-left: 2.5rem;
 }
 
-.skills_list{
+.skills_title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 2rem;
+    height: 2px;
+    background: linear-gradient(90deg, #60a5fa, transparent);
+}
+
+.skills_list {
     display: grid;
-    grid-template-columns: repeat(8,1fr);
-    margin-left: 45px;
-    width: 80vw;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+    padding: 1rem 0;
 }
 
-.skills_list li{
-    padding: 10px 20px;
-    font-weight: 500;
-    border: 2px solid aliceblue;
-    margin: 5px;
-}
-
-@media screen and (max-width:800px) {
-    .skills_list{
-        grid-template-columns: repeat(6,1fr);
+@media screen and (max-width: 800px) {
+    .skills_list {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     }
-
-    .skills_list li{
-        font-weight: 400;
-        padding: 8px 16px;
+    
+    .skills {
+        padding: 1.5rem;
+        margin: 1.5rem;
     }
 }
 
-@media screen and (max-width:500px) {
-    .skills_list{
-        grid-template-columns: repeat(4,1fr);
-        margin-left: 20px;
+@media screen and (max-width: 500px) {
+    .skills_list {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
-
-    .skills_list li{
-        font-size: x-small;
-        border: 1.5px solid aliceblue;
-        font-weight: 300;
-        padding: 4px 8px;
+    
+    .skills {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    .each_skill {
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+    }
+    
+    .skills_title {
+        font-size: 1.5rem;
+        margin: 2rem 0 1rem;
+        padding-left: 2rem;
     }
 }

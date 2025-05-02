@@ -1,50 +1,96 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../css/Projects.css';
-import { useState } from 'react';
 import { motion } from "framer-motion";
 
-function Projects({ Key,title,description,frameworks,github,live,pic,colors,type }) {
+function Projects({ Key, title, description, frameworks, github, live, pic, colors, type }) {
   return (
-      <motion.div 
-        initial={{ opacity: 0.5, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}  
-        className={`projects `}
-      >
-        <motion.div  className="project_body">
-          <div class="project1">
-            <h2 className="projecttitle">
-              {title}
-            </h2>
-            <p className={`projectDes`}>{description}</p>
-            <div className='projectTech'>
-              <div className="projectList">
-                {Array(frameworks.length).fill().map((_,i)=>(
-                    <li className='each_skill2'>{frameworks[i]}</li>
-                ))}
-              </div>
-            </div>
-            <div className='projectLinks'>
-            {github.map((github)=>
-            (<a href={github}>
-              <i class="fa-brands fa-github spacing"></i>
-            </a>)
-            )}
-            {live.map((live)=>
-            (<a href={live}>
-              <i class="fa-solid fa-link spacings"></i>
-            </a>)
-            )}
-            </div>
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="projects"
+    >
+      <div className="project_body">
+        <div className="project1">
+          <motion.h2 
+            className="projecttitle"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            {title}
+          </motion.h2>
+          <p className="projectDes">{description}</p>
+          <div className='projectTech'>
+            <motion.div 
+              className="projectList"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+            >
+              {frameworks.map((framework, index) => (
+                <motion.li 
+                  key={index}
+                  className='each_skill2'
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * index + 0.5 }}
+                >
+                  {framework}
+                </motion.li>
+              ))}
+            </motion.div>
           </div>
-          {pic.map((pic)=>
-          ( <div className='project_image' style={type=="mobile" ? {textAlign:"center"}:{}}>
-            <a href={live[0]} ><img src={pic} alt={title} style={type=="mobile" ? {width:"40%"}:{}} /></a>
-          </div>)
-          )}
+          <motion.div 
+            className='projectLinks'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+          >
+            {github.map((link, index) => (
+              <motion.a 
+                key={index}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1 }}
+              >
+                <i className="fa-brands fa-github spacing"></i>
+              </motion.a>
+            ))}
+            {live.map((link, index) => (
+              <motion.a 
+                key={index}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1 }}
+              >
+                <i className="fa-solid fa-link spacings"></i>
+              </motion.a>
+            ))}
+          </motion.div>
+        </div>
+        <motion.div 
+          className='project_image'
+          style={type === "mobile" ? {textAlign: "center"} : {}}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          {pic.map((image, index) => (
+            <a key={index} href={live[0]} target="_blank" rel="noopener noreferrer">
+              <img 
+                src={image} 
+                alt={title} 
+                style={type === "mobile" ? {width: "40%"} : {}}
+              />
+            </a>
+          ))}
         </motion.div>
+      </div>
     </motion.div>
-  )
+  );
 }
 
 export default Projects;

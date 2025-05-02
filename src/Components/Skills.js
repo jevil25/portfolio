@@ -3,34 +3,36 @@ import SkillsData from '../Data/SkillsData';
 import '../css/Skills.css';
 
 function Skills() {
+  const categories = {
+    languages: SkillsData.filter(skill => skill.type === "language"),
+    frameworks: SkillsData.filter(skill => skill.type === "framework" || skill.type === "library"),
+    tools: SkillsData.filter(skill => skill.type === "tools" || skill.type === "database")
+  };
+
   return (
     <div data-aos="fade-left" data-aos-duration="1000" className='skills'>
       <h3 className='skills_title'>Languages</h3>
       <div className="skills_list">
-        {
-          SkillsData.map((skill) => (
-            skill.type === "language" ? <li className='each_skill' style={{backgroundColor: skill.color}}>{ skill.title }</li> : null
-            ))  
-        }
+        {categories.languages.map((skill, index) => (
+          <li key={index} className='each_skill'>{skill.title}</li>
+        ))}
       </div>
-      <h3 className='skills_title'>FrameWorks and Libraries</h3>
+
+      <h3 className='skills_title'>Frameworks and Libraries</h3>
       <div className="skills_list">
-        {
-          SkillsData.map((skill) => (
-            skill.type === "framework" || skill.type==="library" ? <li className='each_skill' style={{backgroundColor: skill.color}}>{ skill.title }</li> : null
-            ))  
-        }
+        {categories.frameworks.map((skill, index) => (
+          <li key={index} className='each_skill'>{skill.title}</li>
+        ))}
       </div>
-      <h3 className='skills_title'>Tools</h3>
+
+      <h3 className='skills_title'>Tools & Databases</h3>
       <div className="skills_list">
-        {
-          SkillsData.map((skill) => (
-            skill.type === "tools" ? <li className='each_skill' style={{backgroundColor: skill.color}}>{ skill.title }</li> : null
-            ))  
-        }
+        {categories.tools.map((skill, index) => (
+          <li key={index} className='each_skill'>{skill.title}</li>
+        ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default Skills
+export default Skills;

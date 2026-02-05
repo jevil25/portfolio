@@ -23,7 +23,7 @@ function Description() {
     }, [currentSkill, index, skills]);
 
     return (
-        <div data-aos="fade-right" data-aos-duration="1000" id="Description">
+        <div data-aos="fade-right" data-aos-duration="600" data-aos-offset="80" id="Description">
             <div>
                 <span>Aloha, My name is</span>
                 <h1>Aaron Jevil Nazareth</h1>
@@ -34,7 +34,10 @@ function Description() {
                     </h1>
                 </div>
                 <p>
-                    I am Computer Science Engineering Student. My interests are web development, watching anime, movies, random things on Youtube. I am also a pianist and like to play during my free time. I am currently improving my skills in this field next I am going to start with Nextjs and typescript. I have also explored the field of cyber security in the past 2 years. I have built many different projects which are mentioned below. Do reach out to me for any advices and projects you want to collaborate with me in the below message box or using my socials.
+                    I build scalable data systems and full-stack applications using Python, PySpark, AWS, and React. I love solving complex problems, optimizing performance, and turning data into actionable insights.
+                </p>
+                <p>
+                    Currently working on large-scale data pipelines and recommendation engines that process millions of records and power intelligent applications.
                 </p>
             </div>
             <div className="profile_img">

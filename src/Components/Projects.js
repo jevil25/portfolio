@@ -7,7 +7,7 @@ function Projects({ Key, title, description, frameworks, github, live, pic, colo
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.4 }}
       className="projects"
     >
       <div className="project_body">
@@ -16,7 +16,7 @@ function Projects({ Key, title, description, frameworks, github, live, pic, colo
             className="projecttitle"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.08 }}
           >
             {title}
           </motion.h2>
@@ -26,7 +26,7 @@ function Projects({ Key, title, description, frameworks, github, live, pic, colo
               className="projectList"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.15 }}
             >
               {frameworks.map((framework, index) => (
                 <motion.li 
@@ -34,7 +34,7 @@ function Projects({ Key, title, description, frameworks, github, live, pic, colo
                   className='each_skill2'
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 * index + 0.5 }}
+                  transition={{ delay: 0.05 * index + 0.18 }}
                 >
                   {framework}
                 </motion.li>
@@ -45,7 +45,7 @@ function Projects({ Key, title, description, frameworks, github, live, pic, colo
             className='projectLinks'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.25 }}
           >
             {github.map((link, index) => (
               <motion.a 
@@ -76,7 +76,7 @@ function Projects({ Key, title, description, frameworks, github, live, pic, colo
           style={type === "mobile" ? {textAlign: "center"} : {}}
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.1 }}
         >
           {pic.map((image, index) => (
             <a key={index} href={live[0]} target="_blank" rel="noopener noreferrer">

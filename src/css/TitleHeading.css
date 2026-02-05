@@ -1,16 +1,23 @@
 .projectHeading {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    margin: 4rem 2rem 2rem;
+    gap: 2rem;
+    margin: 4rem 2rem 2.5rem;
+    padding: 2rem 2rem 1.5rem;
+    border-bottom: 2px solid rgba(96, 165, 250, 0.1);
 }
 
 .projectHeading h1 {
-    font-size: 2rem;
-    color: #60a5fa;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #93c5fd 0%, #49b792 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     white-space: nowrap;
     position: relative;
     padding-bottom: 0.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
 }
 
 .projectHeading h1::after {
@@ -18,35 +25,68 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 50%;
+    width: 40%;
     height: 3px;
-    background: linear-gradient(to right, #60a5fa, transparent);
+    background: linear-gradient(135deg, #93c5fd, #49b792);
     border-radius: 2px;
 }
 
 .projectHeading div {
-    height: 1px;
-    background: linear-gradient(to right, #60a5fa20, #60a5fa05);
+    height: 2px;
+    background: linear-gradient(to right, rgba(96, 165, 250, 0.3), rgba(96, 165, 250, 0.05));
     width: 100%;
     border-radius: 1px;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1000px) {
     .projectHeading {
         margin: 3rem 1.5rem 1.5rem;
+        padding: 1.5rem 1.5rem 1rem;
+    }
+    
+    .projectHeading h1 {
+        font-size: 2rem;
+    }
+
+    .projectHeading h1::after {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .projectHeading {
+        margin: 2.5rem 1rem 1.25rem;
+        padding: 1.25rem 1rem 0.75rem;
+        gap: 1.5rem;
     }
     
     .projectHeading h1 {
         font-size: 1.75rem;
     }
+
+    .projectHeading h1::after {
+        width: 30%;
+    }
 }
 
 @media screen and (max-width:500px) {
     .projectHeading {
-        margin: 2rem 1rem 1rem;
+        margin: 2rem 0.75rem 1rem;
+        padding: 1rem 0.75rem 0.5rem;
+        gap: 1rem;
+        flex-wrap: wrap;
     }
 
     .projectHeading h1 {
         font-size: 1.5rem;
+        width: 100%;
+    }
+
+    .projectHeading div {
+        width: 100%;
+    }
+
+    .projectHeading h1::after {
+        width: 25%;
     }
 }

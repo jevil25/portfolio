@@ -1,137 +1,531 @@
-.projects{
-    width: 40vw;
-    background-color: #132642;
-    border-radius: 20px;
-    cursor: pointer;
+.projects {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.6) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 28px;
+  padding: 0;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 3rem auto;
+  max-width: 1100px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 8px 16px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 0;
+  min-height: 550px;
 }
 
-.width{
-    width: 100%;
+.projects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.5), transparent);
+  z-index: 10;
 }
 
-.project_body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    padding: 10px;
+.projects::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.2), transparent, rgba(73, 183, 146, 0.2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
 }
 
-.project_image{
-    width: 450px;
-    height: auto;
+.projects:hover {
+  transform: translateY(-12px) scale(1.01);
+  box-shadow: 
+    0 40px 100px rgba(96, 165, 250, 0.3),
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border-color: rgba(96, 165, 250, 0.35);
 }
 
-.project_image img{
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
+.projects:hover::after {
+  opacity: 1;
 }
 
-.projecttitle{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    color: #ccd6f6;
-    font-size: 30px;
-    font-weight: bold;
-    margin:10px;
-    padding-bottom: 10px;
-    border-bottom: #ccd6f6;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
+.width {
+  width: 100%;
+  height: 100%;
 }
 
-.hideDes{
-    display: none;
-    visibility: hidden;
+.project_body {
+  display: contents;
 }
 
-.showDes{
-    display:flex;
-    visibility: visible;
+.project_image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: visible;
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.05), rgba(73, 183, 146, 0.03));
+  margin: 0;
+  grid-column: 2;
+  grid-row: 1;
+  border-radius: 0 28px 28px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
 }
 
-.projectList{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 0px 10px;
+.project_image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.4) 0%, transparent 40%);
+  z-index: 1;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
 }
 
-.projectStack{
-    color: #ccd6f6;
-    margin: 20px;
-    margin-left: 15px;
-    font-size: larger;
+.projects:hover .project_image::before {
+  opacity: 0.2;
 }
 
-.projectList li{
-    list-style-type: none;
-    color: #ccd6f6;
-    font-size: large;
+.project_image a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
-.each_skill2{
-    list-style: none;
-    margin-right: 10px;
-    text-align: center;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 30px;
-    border-color: white;
-    color: #ccd6f6;
-    padding:5px;
-    width: 100px;
-    height: auto;
+.project_image img {
+  max-width: 120%;
+  max-height: 120%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center right;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(0.98) contrast(1.05) drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+  transform-origin: center;
+}
+
+.projects:hover .project_image img {
+  transform: scale(1.08) translateX(-5px);
+  filter: brightness(1.02) contrast(1.08) drop-shadow(0 15px 40px rgba(96, 165, 250, 0.2));
+}
+
+.project1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem 2.5rem 3rem 3rem;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.4) 0%, rgba(30, 41, 59, 0.15) 100%);
+  grid-column: 1;
+  grid-row: 1;
+  border-radius: 28px 0 0 28px;
+}
+
+.projecttitle {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #dbeafe 0%, #60a5fa 40%, #49b792 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  letter-spacing: -0.75px;
+  line-height: 1.2;
+  position: relative;
+  padding-bottom: 0.875rem;
+}
+
+.projecttitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 3.5px;
+  background: linear-gradient(90deg, #60a5fa, #49b792);
+  border-radius: 2px;
 }
 
 .projectDes {
-    text-align: left;
-    padding: 1.25rem;
+  color: #cbd5e1;
+  line-height: 1.75;
+  font-size: 0.975rem;
+  text-align: left;
+  margin: 0;
+  font-weight: 400;
+  opacity: 0.95;
+  flex: 0 0 auto;
+}
+
+.projectStack {
+  color: #94a3b8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0.25rem 0 0.875rem 0;
+  display: block;
+}
+
+.projectTech {
+  position: relative;
+  z-index: 3;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.projectList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  margin: 0;
+  padding: 0;
+  align-content: flex-start;
+}
+
+.projectList li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.each_skill2 {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.12) 0%, rgba(73, 183, 146, 0.08) 100%);
+  color: #93c5fd;
+  padding: 0.55rem 1.1rem;
+  border-radius: 11px;
+  font-size: 0.825rem;
+  border: 1.5px solid rgba(96, 165, 250, 0.2);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  line-height: 1.2;
+}
+
+.each_skill2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.each_skill2:hover::before {
+  left: 100%;
+}
+
+.each_skill2:hover {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.22) 0%, rgba(73, 183, 146, 0.18) 100%);
+  color: #49b792;
+  border-color: rgba(73, 183, 146, 0.5);
+  transform: translateY(-2px) scale(1.03);
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(73, 183, 146, 0.2);
+}
+
+.projectLinks {
+  display: flex;
+  gap: 1.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+  flex: 0 0 auto;
+  margin-top: auto;
+}
+
+.projectLinks a {
+  color: #60a5fa;
+  font-size: 1.3rem;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.08), rgba(73, 183, 146, 0.05));
+  border: 1.5px solid rgba(96, 165, 250, 0.2);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.projectLinks a::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(96, 165, 250, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.projectLinks a:hover::before {
+  opacity: 1;
+}
+
+.projectLinks a:hover {
+  color: #49b792;
+  background: linear-gradient(135deg, rgba(73, 183, 146, 0.18), rgba(96, 165, 250, 0.12));
+  border-color: rgba(73, 183, 146, 0.5);
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 8px 20px rgba(73, 183, 146, 0.3);
+}
+
+.projectLinks a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hideDes {
+  display: none;
+  visibility: hidden;
+}
+
+.showDes {
+  display: block;
+  visibility: visible;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .projects {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+    min-height: auto;
+  }
+  
+  .project_image {
+    grid-column: 1;
+    grid-row: 1;
+    min-height: 360px;
+    border-radius: 28px 28px 0 0;
+    padding: 2.5rem 2rem;
+    overflow: hidden;
+  }
+  
+  .project_image::before {
+    background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.5) 100%);
+  }
+  
+  .project_image img {
+    max-width: 90%;
+    max-height: 90%;
+    object-position: center;
+  }
+  
+  .projects:hover .project_image img {
+    transform: scale(1.05) translateX(0);
+  }
+  
+  .project1 {
+    grid-column: 1;
+    grid-row: 2;
+    border-radius: 0 0 28px 28px;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(30, 41, 59, 0.3) 100%);
+    padding: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .projects{
-        width: 80vw;
-    }
-    .project_image{
-        width: 100%;
-    }
-    .projecttitle{
-        font-size: 20px;
-    }
-    .projectStack{
-        font-size: small;
-        margin: 10px;
-    }
-    .each_skill2{
-        width: 80px;
-        font-size: 20px;
-    }
-    .projectDes{
-        flex-basis: 100%;
-        position: relative;
-        left: 0;
-        padding: 1.25rem;
-        margin: 0.5rem 0;
-        border-radius: 4px;
-        box-shadow: none;
-        text-align: left;
-    }
-    .projectList li{
-        font-size: small;
-    }
+  .projects {
+    margin: 2.5rem 1.5rem;
+    border-radius: 22px;
+  }
+  
+  .project_image {
+    min-height: 320px;
+    border-radius: 22px 22px 0 0;
+    padding: 2rem 1.5rem;
+  }
+  
+  .project_image img {
+    max-width: 85%;
+    max-height: 85%;
+  }
+  
+  .project1 {
+    padding: 2rem;
+    gap: 1.35rem;
+    border-radius: 0 0 22px 22px;
+  }
+  
+  .projecttitle {
+    font-size: 1.75rem;
+  }
+  
+  .projectDes {
+    font-size: 0.925rem;
+  }
+  
+  .each_skill2 {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .projectList {
+    gap: 0.55rem;
+  }
+  
+  .projectLinks a {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .projects {
+    margin: 2rem 1rem;
+    border-radius: 18px;
+  }
+  
+  .project_image {
+    min-height: 280px;
+    border-radius: 18px 18px 0 0;
+    padding: 1.75rem 1.25rem;
+  }
+  
+  .project_image img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  .project1 {
+    padding: 1.75rem;
+    gap: 1.2rem;
+    border-radius: 0 0 18px 18px;
+  }
+  
+  .projecttitle {
+    font-size: 1.5rem;
+  }
+  
+  .projecttitle::after {
+    width: 60px;
+    height: 3px;
+  }
+  
+  .projectDes {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+  
+  .projectStack {
+    font-size: 0.72rem;
+    margin: 0.25rem 0 0.75rem 0;
+  }
+  
+  .each_skill2 {
+    padding: 0.48rem 0.95rem;
+    font-size: 0.78rem;
+  }
+  
+  .projectList {
+    gap: 0.5rem;
+  }
+  
+  .projectLinks {
+    gap: 1rem;
+    padding-top: 1.25rem;
+  }
+  
+  .projectLinks a {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .projectDes {
-        padding: 1rem;
-        font-size: 0.9rem;
-    }
+  .projects {
+    margin: 1.5rem 0.75rem;
+    border-radius: 16px;
+  }
+  
+  .project_image {
+    min-height: 240px;
+    border-radius: 16px 16px 0 0;
+    padding: 1.5rem 1rem;
+  }
+  
+  .project_image img {
+    max-width: 75%;
+    max-height: 75%;
+  }
+  
+  .project1 {
+    padding: 1.5rem;
+    gap: 1rem;
+    border-radius: 0 0 16px 16px;
+  }
+  
+  .projecttitle {
+    font-size: 1.3rem;
+    letter-spacing: -0.5px;
+  }
+  
+  .projecttitle::after {
+    width: 50px;
+    height: 2.5px;
+  }
+  
+  .projectDes {
+    font-size: 0.85rem;
+    line-height: 1.65;
+  }
+  
+  .projectStack {
+    font-size: 0.68rem;
+    margin: 0.25rem 0 0.65rem 0;
+    letter-spacing: 1px;
+  }
+  
+  .each_skill2 {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.74rem;
+    border-radius: 10px;
+  }
+  
+  .projectList {
+    gap: 0.45rem;
+  }
+  
+  .projectLinks {
+    gap: 0.75rem;
+    padding-top: 1rem;
+  }
+  
+  .projectLinks a {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
 }

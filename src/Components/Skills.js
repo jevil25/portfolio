@@ -10,7 +10,7 @@ function Skills() {
   };
 
   return (
-    <div data-aos="fade-left" data-aos-duration="1000" className='skills'>
+    <div data-aos="fade-left" data-aos-duration="600" data-aos-offset="80" className='skills'>
       <h3 className='skills_title'>Languages</h3>
       <div className="skills_list">
         {categories.languages.map((skill, index) => (

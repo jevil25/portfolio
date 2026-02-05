@@ -3,7 +3,7 @@ import '../css/Experience.css';
 
 function Experience({company,designation,duration,description,certificate}) {
   return (
-    <div className="experience" data-aos="fade-left">
+    <div className="experience" data-aos="fade-left" data-aos-duration="600" data-aos-offset="80">
       <div className='experienceHeading'>
         <h3>{company}</h3>
       </div>

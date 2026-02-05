@@ -7,9 +7,11 @@ import Skills from './Components/Skills'
 import Contact from './Components/Contact';
 import TitleHeading from './Components/TitleHeading';
 import Footer from './Components/Footer';
-import Loader from './Components/Loader';
+
 import './css/normalize.css'
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Education from './Components/Education';
 import education from './Data/education';
 import Experience from './Components/Experience';
@@ -17,22 +19,20 @@ import experience from './Data/experience';
 // ..
 
 function App() {
-  const [loading,setLoading] = useState(true);
   const [projectType, setProjectType] = useState('web');
 
-	useEffect(() => {
-		const timeout = setTimeout(() => {
-		setLoading(false);
-		},3000)
+  useEffect(() => {
+    AOS.init({
+      duration: 600,        // Faster animation duration (was 1000ms by default)
+      offset: 100,          // Trigger animations 100px before element is in view
+      once: true,           // Animation happens only once
+      easing: 'ease-in-out',
+      delay: 0              // No delay between scroll and animation start
+    });
+  }, []);
 
-		return () => clearTimeout(timeout);
-	})
   return (
     <>
-    <div>
-      {loading?
-      (<Loader />)
-    :(
     <div>
       <Header />
         <Description />
@@ -98,10 +98,7 @@ function App() {
           <Contact />
         <Footer />
       </div>
-    )
-      }
-      </div>
-   </>
+    </>
   );
 }
 

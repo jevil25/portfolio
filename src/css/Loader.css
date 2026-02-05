@@ -1,13 +1,15 @@
 .Loader img{
   animation: A_logo 2s linear infinite;
-  width:200px;
+  width: 200px;
   height: 200px;
   text-align: center;
   border-radius: 50%;
+  box-shadow: 0 0 30px rgba(96, 165, 250, 0.3);
+  filter: drop-shadow(0 0 20px rgba(73, 183, 146, 0.2));
 }
 
 .Loader{
-  background-color: #0a192f;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -15,20 +17,39 @@
   height: 100vh;
   width: 100vw;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.Loader::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(96, 165, 250, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(73, 183, 146, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.Loader img {
+  position: relative;
+  z-index: 1;
 }
 
 @keyframes A_logo {
-    from {
-      transform:rotate(0deg);
+  from {
+    transform: rotate(0deg);
   }
   to {
-      transform:rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @media screen and (max-width:500px) {
   .Loader img{
-    width:100px;
-    height:100px;
+    width: 150px;
+    height: 150px;
   }
 }

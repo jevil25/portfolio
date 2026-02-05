@@ -1,46 +1,61 @@
 .experience {
-    padding: 2rem;
-    margin: 2rem 3rem;
-    border-radius: 12px;
-    background-color: rgba(30, 41, 59, 0.3);
-    backdrop-filter: blur(8px);
-    transition: transform 0.3s ease;
+    padding: 2.5rem;
+    margin: 2.5rem auto;
+    max-width: 1000px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.3) 100%);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    backdrop-filter: blur(15px);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .experience:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    border-color: rgba(96, 165, 250, 0.2);
+    box-shadow: 0 12px 40px rgba(96, 165, 250, 0.15);
 }
 
 .experienceHeading h3 {
     font-size: 1.75rem;
-    font-weight: 600;
-    color: #60a5fa;
+    font-weight: 700;
+    background: linear-gradient(135deg, #93c5fd, #49b792);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 1rem;
+    letter-spacing: -0.5px;
 }
 
 .expdescription h4 {
     margin: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
     color: #e2e8f0;
 }
 
 .expdescription h5 {
     color: #94a3b8;
     font-size: 1rem;
-    margin: 0.5rem 0;
+    margin: 0.75rem 0;
+    font-weight: 500;
 }
 
 .expdescription p {
-    color: #94a3b8;
-    line-height: 1.7;
+    color: #cbd5e1;
+    line-height: 1.8;
     white-space: pre-line;
-    margin: 1rem 0;
+    margin: 1.25rem 0;
+    font-weight: 400;
 }
 
 .certification {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background: rgba(96, 165, 250, 0.08);
+    border-left: 3px solid #49b792;
+    border-radius: 8px;
 }
 
 .certification pre {
@@ -53,20 +68,24 @@
     color: #60a5fa;
     transition: all 0.3s ease;
     position: relative;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .certification a:hover {
-    color: #93c5fd;
+    color: #49b792;
 }
 
 .certification a::after {
     content: '';
     position: absolute;
     width: 100%;
-    height: 1px;
-    bottom: -2px;
+    height: 2px;
+    bottom: -4px;
     left: 0;
-    background-color: #60a5fa;
+    background: linear-gradient(to right, #60a5fa, #49b792);
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease;
@@ -79,8 +98,8 @@
 
 @media screen and (max-width: 768px) {
     .experience {
-        padding: 1.5rem;
-        margin: 1.5rem;
+        padding: 2rem;
+        margin: 2rem 1.5rem;
     }
     
     .experienceHeading h3 {
@@ -90,14 +109,18 @@
     .expdescription h4 {
         font-size: 1.25rem;
     }
+
+    .certification {
+        padding: 1rem;
+    }
 }
 
 @media screen and (max-width: 500px) {
     .experience {
-        padding: 1rem;
-        margin: 1rem;
+        padding: 1.5rem;
+        margin: 1.5rem 1rem;
     }
-    
+
     .experienceHeading h3 {
         font-size: 1.25rem;
     }
@@ -105,8 +128,8 @@
     .expdescription h4 {
         font-size: 1.1rem;
     }
-    
+
     .expdescription p {
-        font-size: 0.875rem;
+        font-size: 0.95rem;
     }
 }

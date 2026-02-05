@@ -37,7 +37,7 @@ function TopBar() {
               <i className="fa-solid fa-envelope"></i>
             </a>
             <a 
-              href="https://drive.google.com/file/d/1iC2y5qJpMWXqDkR1SyVrYbFIOcjm8_nD/view?usp=sharing" 
+              href="https://drive.google.com/file/d/1uAZPGKKXcEjLqoFeKszPdDP2M1EDa63O/view?usp=sharing" 
               className="social-link resume-link"
               title="Resume"
             >

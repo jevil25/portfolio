@@ -72,7 +72,7 @@ function SideBar() {
           
           {/* Resume Link */}
           <a 
-            href="https://drive.google.com/file/d/1uAZPGKKXcEjLqoFeKszPdDP2M1EDa63O/view?usp=sharing"
+            href="https://drive.google.com/file/d/1xxeBBevoK6g_9ZYbC3UwbteRBFW9unWU/view"
             className="sidebar-social resume-btn"
             title="Resume"
             target="_blank"

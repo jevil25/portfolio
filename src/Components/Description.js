@@ -1,50 +1,54 @@
 import "../css/Description.css";
 import React, { useState, useEffect } from "react";
-import coder from "../Images/result.svg";
+
+const FOCUS = ["backend services", "data pipelines", "entity resolution", "distributed systems"];
 
 function Description() {
-    const [skills] = useState(["CSE Engineer", "Web Developer", "Problem Solver", "Gamer"]);
-    const [currentSkill, setCurrentSkill] = useState("");
+    const [text, setText] = useState("");
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
+        const current = FOCUS[index];
         const timer = setTimeout(() => {
-            if (currentSkill === skills[index]) {
+            if (text === current) {
                 setTimeout(() => {
-                    setCurrentSkill("");
-                    setIndex((prev) => (prev + 1) % skills.length);
-                }, 1500);
+                    setText("");
+                    setIndex((prev) => (prev + 1) % FOCUS.length);
+                }, 1600);
             } else {
-                setCurrentSkill(skills[index].slice(0, currentSkill.length + 1));
+                setText(current.slice(0, text.length + 1));
             }
-        }, 100);
-
+        }, 90);
         return () => clearTimeout(timer);
-    }, [currentSkill, index, skills]);
+    }, [text, index]);
 
     return (
-        <div data-aos="fade-right" data-aos-duration="600" data-aos-offset="80" id="Description">
-            <div>
-                <span>Aloha, My name is</span>
-                <h1>Aaron Jevil Nazareth</h1>
-                <div className="main-h1">
-                    <h1>I am a</h1>
-                    <h1 className="mov-text">
-                        {currentSkill}<span className="cursor">|</span>
-                    </h1>
+        <section id="top" className="hero">
+            <div className="hero-record">
+                <span className="hero-eyebrow">001 · software engineer 2 · backend &amp; data · bengaluru, india</span>
+                <h1 className="hero-name">Aaron Nazareth</h1>
+                <p className="hero-focus">
+                    focused on <span className="hero-focus-value">{text}<span className="cursor">▌</span></span>
+                </p>
+                <p className="hero-bio">
+                    I&apos;m a backend &amp; data-pipeline engineer with 2.5+ years building
+                    high-scale data pipelines and high-throughput backend services. Right
+                    now I&apos;m shipping Java, Spring Boot and Node.js services at Outcomes.
+                    Before that I built distributed PySpark and Databricks pipelines at a
+                    Goldman Sachs spinoff.
+                </p>
+                <dl className="hero-metrics">
+                    <div><dt>1M+</dt><dd>requests / day</dd></div>
+                    <div><dt>3M+</dt><dd>records / month</dd></div>
+                    <div><dt>4M+</dt><dd>profiles enriched</dd></div>
+                </dl>
+                <div className="hero-actions">
+                    <a className="hero-link primary" href="#Contact">get in touch</a>
+                    <a className="hero-link" href="https://github.com/jevil25" target="_blank" rel="noopener noreferrer">github ↗</a>
+                    <a className="hero-link" href="https://www.linkedin.com/in/aaron-nazareth-6580311b6/" target="_blank" rel="noopener noreferrer">linkedin ↗</a>
                 </div>
-                <p>
-                    I build scalable data systems and full-stack applications using Python, PySpark, AWS, and React. I love solving complex problems, optimizing performance, and turning data into actionable insights.
-                </p>
-                <p>
-                    Currently working on large-scale data pipelines and recommendation engines that process millions of records and power intelligent applications.
-                </p>
             </div>
-            <div className="profile_img">
-                <div className="background-pattern"></div>
-                <img src={coder} alt="coder illustration" />
-            </div>
-        </div>
+        </section>
     );
 }
 

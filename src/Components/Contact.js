@@ -19,8 +19,7 @@ function Contact() {
         setTimeout(() => {
           setShowMessage(false);
         }, 5000); // Hide message after 5 seconds
-      }, (error) => {
-        console.log(error.text);
+      }, () => {
         setSending(false);
       });
   };
@@ -50,12 +49,11 @@ function Contact() {
         )}
       </form>
       <div className='contact2'>
-        <article class="contact-info">
+        <article className="contact-info">
           <h2>Get in touch!</h2>
-          <p><a href="https://www.instagram.com/aaron_naz25/"><i class="fa-brands fa-instagram"></i>aaron_naz25</a></p>
-          <p><a href="https://www.linkedin.com/in/aaron-nazareth-6580311b6/"><i class="fa-brands fa-linkedin"></i>Aaron Nazareth</a></p>
-          <p><a href="mailto:jevil257@gmail.com"><i class="fa-solid fa-envelope"></i>jevil257@gmail.com</a></p>
-          <p><a href="https://github.com/jevil25"><i class="fa-brands fa-github"></i>jevil25</a></p>
+          <p><a href="https://www.linkedin.com/in/aaron-nazareth-6580311b6/"><i className="fa-brands fa-linkedin"></i>Aaron Nazareth</a></p>
+          <p><a href="https://github.com/jevil25"><i className="fa-brands fa-github"></i>jevil25</a></p>
+          <p><a href="mailto:jevil257@gmail.com"><i className="fa-solid fa-envelope"></i>jevil257@gmail.com</a></p>
         </article>
       </div>
     </div>

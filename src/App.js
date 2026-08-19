@@ -16,89 +16,96 @@ import Education from './Components/Education';
 import education from './Data/education';
 import Experience from './Components/Experience';
 import experience from './Data/experience';
-// ..
+
+const PROJECT_TYPES = [
+  { value: 'data', label: 'systems & data' },
+  { value: 'web', label: 'web' },
+  { value: 'archive', label: 'archive' },
+];
 
 function App() {
-  const [projectType, setProjectType] = useState('web');
+  const [projectType, setProjectType] = useState('data');
 
   useEffect(() => {
-    AOS.init({
-      duration: 600,        // Faster animation duration (was 1000ms by default)
-      offset: 100,          // Trigger animations 100px before element is in view
-      once: true,           // Animation happens only once
-      easing: 'ease-in-out',
-      delay: 0              // No delay between scroll and animation start
-    });
+    AOS.init({ duration: 500, offset: 60, once: true, easing: 'ease-out' });
   }, []);
 
+  const visibleProjects = projectdata.filter((p) => p.type === projectType);
+
   return (
-    <>
     <div>
       <Header />
+      <main>
         <Description />
-        <TitleHeading 
-            title="Experience"
+
+        <TitleHeading title="Experience" index="02" count={experience.length} />
+        {experience.map((e, i) => (
+          <Experience
+            key={e.id ?? i}
+            index={String(i + 1).padStart(2, '0')}
+            company={e.company}
+            designation={e.designation}
+            duration={e.duration}
+            description={e.description}
+            certificate={e.certificate}
           />
-        {Array(experience.length).fill().map((_,i)=>(
-                <Experience
-                  Key={experience[i].Key}
-                  company={experience[i].company}
-                  designation={experience[i].designation}
-                  duration={experience[i].duration}
-                  description={experience[i].description}
-                  certificate={experience[i].certificate}
-                  />
-          ))} 
-        <TitleHeading 
-            title="Projects"
-          />
-          <div className="projectType">
-            <button onClick={() => setProjectType('web')} className={projectType === 'web' ? 'active projectButton' : 'projectButton'}>Web</button>
-            <button onClick={() => setProjectType('mobile')} className={projectType === 'mobile' ? 'active projectButton' : 'projectButton'}>Mobile</button>
-            <button onClick={() => setProjectType('Machine Learning')} className={projectType === 'Machine Learning' ? 'active projectButton' : 'projectButton'}>Machine Learning</button>
-            <button onClick={() => setProjectType('Graphics')} className={projectType === 'Graphics' ? 'active projectButton' : 'projectButton'}>Graphics</button>
-            <button onClick={() => setProjectType('Cloud Computing')} className={projectType === 'Cloud Computing' ? 'active projectButton' : 'projectButton'}>Cloud Computing</button>
-          </div>
-          <div className="projectDisplay">
-              {Array(projectdata.length).fill().map((_,i)=>(
-                projectdata[i].type === projectType &&
-                <Projects
-                  Key={projectdata[i].Key}
-                  title={projectdata[i].title}
-                  description={projectdata[i].description}
-                  frameworks={projectdata[i].Technologies_Used}
-                  github={projectdata[i].github}
-                  live={projectdata[i].live}
-                  pic={projectdata[i].pic}
-                  colors={projectdata[i].technologies_color}
-                  type={projectdata[i].type}
-                  />
-              ))}
-            </div>
-              <h3 class="apph3">For more projects visit my github repo's here: <p><a href="https://github.com/jevil25"><i class="fa-brands fa-github"></i>jevil25</a></p></h3>
-          <TitleHeading 
-            title="Education"
-          />
-        {Array(education.length).fill().map((_,i)=>(
-                <Education
-                  Key={education[i].Key}
-                  college={education[i].college}
-                  year={education[i].year}
-                  course={education[i].course}
-                  marking_scheme={education[i].marking_scheme}
-                  />
-              ))}
-                <TitleHeading 
-                  title="Skills"
-                />
-              <Skills />
-            <TitleHeading 
-              title="Contact"
+        ))}
+
+        <TitleHeading title="Projects" index="03" count={visibleProjects.length} />
+        <div className="proj-filter" role="tablist" aria-label="Project categories">
+          {PROJECT_TYPES.map((t) => (
+            <button
+              key={t.value}
+              role="tab"
+              aria-selected={projectType === t.value}
+              onClick={() => setProjectType(t.value)}
+              className={projectType === t.value ? 'proj-tab active' : 'proj-tab'}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+        <div className="projectDisplay">
+          {visibleProjects.map((p, i) => (
+            <Projects
+              key={p.Key ?? p.key ?? i}
+              index={String(i + 1).padStart(2, '0')}
+              title={p.title}
+              description={p.description}
+              frameworks={p.Technologies_Used}
+              github={p.github}
+              live={p.live}
+              pic={p.pic}
+              type={p.type}
             />
-          <Contact />
-        <Footer />
-      </div>
-    </>
+          ))}
+        </div>
+        <p className="proj-more">
+          more on github →{' '}
+          <a href="https://github.com/jevil25" target="_blank" rel="noopener noreferrer">
+            <i className="fa-brands fa-github"></i> jevil25
+          </a>
+        </p>
+
+        <TitleHeading title="Education" index="04" count={education.length} />
+        {education.map((e, i) => (
+          <Education
+            key={e.key ?? i}
+            college={e.college}
+            year={e.year}
+            course={e.course}
+            marking_scheme={e.marking_scheme}
+          />
+        ))}
+
+        <TitleHeading title="Skills" index="05" />
+        <Skills />
+
+        <TitleHeading title="Contact" index="06" />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   );
 }
 

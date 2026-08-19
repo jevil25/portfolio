@@ -4,13 +4,10 @@
   height: 200px;
   text-align: center;
   border-radius: 50%;
-  box-shadow: 0 0 30px rgba(96, 165, 250, 0.3);
-  filter: drop-shadow(0 0 20px rgba(73, 183, 146, 0.2));
 }
 
 .Loader{
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-  background-size: cover;
+  background: var(--color-surface);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,18 +16,6 @@
   flex-direction: column;
   position: relative;
   overflow: hidden;
-}
-
-.Loader::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 20% 50%, rgba(96, 165, 250, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(73, 183, 146, 0.1) 0%, transparent 50%);
-  pointer-events: none;
 }
 
 .Loader img {

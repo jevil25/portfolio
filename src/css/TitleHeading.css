@@ -1,92 +1,61 @@
-.projectHeading {
+.section-head {
+    max-width: var(--maxw);
+    margin: var(--s8) auto var(--s5);
+    padding: 0 var(--s5);
+    scroll-margin-top: 90px;
+}
+
+.section-head-row {
     display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin: 4rem 2rem 2.5rem;
-    padding: 2rem 2rem 1.5rem;
-    border-bottom: 2px solid rgba(96, 165, 250, 0.1);
+    align-items: baseline;
+    gap: var(--s4);
 }
 
-.projectHeading h1 {
-    font-size: 2.5rem;
-    background: linear-gradient(135deg, #93c5fd 0%, #49b792 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    white-space: nowrap;
-    position: relative;
-    padding-bottom: 0.5rem;
+.section-index {
+    font-family: var(--mono);
+    font-size: 1.1rem;
     font-weight: 800;
-    letter-spacing: -0.5px;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: baseline;
+    gap: var(--s3);
 }
 
-.projectHeading h1::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40%;
-    height: 3px;
-    background: linear-gradient(135deg, #93c5fd, #49b792);
-    border-radius: 2px;
+.section-index::after {
+    content: '/';
+    color: var(--hairline);
+    font-weight: 400;
 }
 
-.projectHeading div {
-    height: 2px;
-    background: linear-gradient(to right, rgba(96, 165, 250, 0.3), rgba(96, 165, 250, 0.05));
-    width: 100%;
-    border-radius: 1px;
+.section-title {
+    font-family: var(--mono);
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--ink);
+    margin: 0;
 }
 
-@media screen and (max-width:1000px) {
-    .projectHeading {
-        margin: 3rem 1.5rem 1.5rem;
-        padding: 1.5rem 1.5rem 1rem;
-    }
-    
-    .projectHeading h1 {
-        font-size: 2rem;
-    }
-
-    .projectHeading h1::after {
-        width: 35%;
-    }
+.section-count {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-left: auto;
 }
 
-@media screen and (max-width:800px) {
-    .projectHeading {
-        margin: 2.5rem 1rem 1.25rem;
-        padding: 1.25rem 1rem 0.75rem;
-        gap: 1.5rem;
-    }
-    
-    .projectHeading h1 {
-        font-size: 1.75rem;
-    }
-
-    .projectHeading h1::after {
-        width: 30%;
-    }
+.section-rule {
+    height: 1px;
+    background: var(--hairline);
+    margin-top: var(--s4);
 }
 
-@media screen and (max-width:500px) {
-    .projectHeading {
-        margin: 2rem 0.75rem 1rem;
-        padding: 1rem 0.75rem 0.5rem;
-        gap: 1rem;
-        flex-wrap: wrap;
+@media (max-width: 600px) {
+    .section-head {
+        margin: var(--s7) auto var(--s4);
+        padding: 0 var(--s4);
     }
 
-    .projectHeading h1 {
-        font-size: 1.5rem;
-        width: 100%;
-    }
-
-    .projectHeading div {
-        width: 100%;
-    }
-
-    .projectHeading h1::after {
-        width: 25%;
+    .section-title {
+        font-size: 1.35rem;
     }
 }

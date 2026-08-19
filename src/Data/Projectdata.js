@@ -1,7 +1,6 @@
 let cadenzaPic = require('../Images/cadenza.png');
 let foodismPic = require('../Images/foodism.png');
 const amazonPic = require('../Images/amazon.png');
-const portfolioPic = require("../Images/portfolio2.png");
 const incrideaClient = require("../Images/incridea-client.png");
 // const incrideaServer = require("../Images/incridea-server.png");
 const incridea2024 = require("../Images/incridea2024.png");
@@ -11,19 +10,43 @@ const letter = require("../Images/letter_recognition.png");
 const compiler = require("../Images/compiler.png");
 const salesine = require("../Images/salesine.png");
 const lipread = require("../Images/lipnet.png");
+const uicuts = require("../Images/uicuts.png");
+const whatsappApi = require("../Images/whatsapp-api.png");
 
 
 const Projectdata = [
     {
-      "Key": 1,
-      "title": "Aaron Nazareth (Portfolio)",
-      "description": "A modern, responsive portfolio website built with React.js, featuring dynamic content sections and smooth animations. Implemented using React hooks for state management and AOS for scroll-based animations. The site showcases projects, skills, and experience with an intuitive user interface and seamless navigation.",
-      "Technologies_Used": ["ReactJS", "Github", "vercel", "Javascript", "React-hooks", "Aos-Animation"],
-      "github": ["https://github.com/jevil25/portfolio"],
-      "live": ["https://aaronnazareth.vercel.app/"],
-      "pic": [portfolioPic],
+      "Key": 15,
+      "title": "News Intelligence Pipeline",
+      "description": "Distributed PySpark + Databricks pipelines processing 3M+ news records/month for real-time entity intelligence and recommendation systems at Louisa AI, a Goldman Sachs spin-off.\n\nKey Results:\n• Raised entity-match accuracy from 55% to 85% across 4M+ company profiles using embeddings and similarity matching\n• Achieved 99%+ pipeline reliability with Airflow-orchestrated batch processing on AWS\n• Cut personalized query latency by 60% through Elasticsearch optimization",
+      "Technologies_Used": ["PySpark", "Databricks", "Apache Airflow", "AWS", "Elasticsearch", "Python"],
+      "github": [""],
+      "live": [""],
+      "pic": [],
+      "type": "data",
+      "technologies_color": []
+    },
+    {
+      "Key": 13,
+      "title": "UICuts",
+      "description": "A Chrome extension that turns UI annotations into structured, code-aware context for AI coding agents. Hover over any page element to inspect typography, colors, and spacing, annotate desired changes, and export as HTML/CSS/JSX with full element context — eliminating vague screenshot-based handoffs and cutting AI prompt token overhead.\n\nKey Features:\n• One-click element inspection without DevTools\n• Visual annotation mode with color picker and font detector\n• Export as HTML, CSS, or JSX with full element context\n• Works across production, staging, and localhost",
+      "Technologies_Used": ["Chrome Extension", "Javascript", "CSS"],
+      "github": [""],
+      "live": ["https://uicuts.com/"],
+      "pic": [uicuts],
       "type": "web",
-      "technologies_color": ["#5ED4F3", "#09244b", "#000000", "#F7DF1E", "#5ED4F3", "#000000"]
+      "technologies_color": ["#F7DF1E", "#F7DF1E", "#1172B8"]
+    },
+    {
+      "Key": 14,
+      "title": "WhatsApp Messaging API",
+      "description": "Built and operated a multi-tenant WhatsApp messaging API serving 50+ developer subscribers on RapidAPI at 99.9% uptime, supporting 16+ message types including media, location, contacts, reactions, and threaded replies.\n\nKey Features:\n• Concurrent session management for multiple persistent WhatsApp connections per tenant with QR and pairing-code auth, automatic reconnection, and webhook-based inbound message delivery\n• Per-key authentication, tiered rate limiting (10-25 req/sec), and usage metering with overage billing\n• OpenAPI/Swagger docs with Zapier and Make.com integrations",
+      "Technologies_Used": ["NodeJS", "ExpressJS", "RapidAPI", "Webhooks", "MongoDB"],
+      "github": [""],
+      "live": ["https://whatsapp-messaging.retentionstack.agency/"],
+      "pic": [whatsappApi],
+      "type": "data",
+      "technologies_color": ["#539E43", "#353535", "#000000", "#F16529", "#58AA50"]
     },
     {
       "Key": 2,
@@ -66,7 +89,7 @@ const Projectdata = [
       "github": ["https://github.com/jevil25/cadenza"],
       "live": ["https://cadenza.vercel.app/"],
       "pic": [cadenzaPic],
-      "type": "web",
+      "type": "archive",
       "technologies_color": ["#F16529", "#1172B8", "#F7DF1E", "#1172B8", "#539E43", "#353535", "#58AA50"]
     },
     {
@@ -77,7 +100,7 @@ const Projectdata = [
       "github": ["https://github.com/jevil25/Foodism.com"],
       "live": ["https://foodism-com.vercel.app/"],
       "pic": [foodismPic],
-      "type": "web",
+      "type": "archive",
       "technologies_color": ["#F16529", "#1172B8", "#F7DF1E", "#1172B8", "#539E43", "#353535", "#58AA50"]
     },
     {
@@ -88,7 +111,7 @@ const Projectdata = [
       "github": ["https://github.com/jevil25/Amazon-clone-using-react"],
       "live": [""],
       "pic": [amazonPic],
-      "type": "web",
+      "type": "archive",
       "technologies_color": ["#5ED4F3", "#fcca3f", "#5ED4F3", "#5ED4F3", "#539E43"]
     },
     {
@@ -99,7 +122,7 @@ const Projectdata = [
       "github": ["https://github.com/Amith-Jagannath/Homify"],
       "live": [""],
       "pic": [Homify],
-      "type": "mobile",
+      "type": "archive",
       "technologies_color": ["#5ED4F3", "#fcca3f", "#5ED4F3", "#5ED4F3", "#539E43"]
     },
     {
@@ -110,7 +133,7 @@ const Projectdata = [
       "github": ["https://github.com/jevil25/Lip-Read-ML-Model"],
       "live": ["https://lipnet.streamlit.app/"],
       "pic": [lipread],
-      "type": "Machine Learning",
+      "type": "archive",
       "technologies_color": ["#5ED4F3", "#fcca3f", "#5ED4F3", "#5ED4F3", "#539E43"]
     },
     {
@@ -121,7 +144,7 @@ const Projectdata = [
       "github": ["https://github.com/jevil25/letter-recognition-using-ml"],
       "live": [""],
       "pic": [letter],
-      "type": "Machine Learning",
+      "type": "archive",
       "technologies_color": ["#5ED4F3", "#fcca3f", "#5ED4F3", "#5ED4F3", "#539E43"]
     },
     {
@@ -132,7 +155,7 @@ const Projectdata = [
       "github": ["https://github.com/jevil25/The-Island-OpenGL"],
       "live": [""],
       "pic": [Vinland],
-      "type": "Graphics",
+      "type": "archive",
       "technologies_color": ["#5ED4F3", "#fcca3f", "#5ED4F3", "#5ED4F3", "#539E43"]
     },
     {
@@ -143,7 +166,7 @@ const Projectdata = [
       "github": ["https://github.com/jevil25/cloud_Compiler"],
       "live": [""],
       "pic": [compiler],
-      "type": "Cloud Computing",
+      "type": "archive",
       "technologies_color": ["#5ED4F3", "#fcca3f", "#5ED4F3", "#5ED4F3", "#539E43"]
     },
   ]

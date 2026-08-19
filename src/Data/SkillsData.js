@@ -1,174 +1,30 @@
-const Skills=[
-    {
-        title:"PySpark",
-        color:"#E25A1C",
-        type:"framework"
-    },
-    {
-        title:"Databricks",
-        color:"#FF3621",
-        type:"tools"
-    },
-    {
-        title:"Kotlin",
-        color:"#7F52FF",
-        type:"language"
-    },
-    {
-        title:"Spring Boot",
-        color:"#6DB33F",
-        type:"framework"
-    },
-    {
-        title:"TypeScript",
-        color:"#3178C6",
-        type:"language"
-    },
-    {
-        title:"NextJS",
-        color:"#000000",
-        type:"framework"
-    },
-    {
-        title:"ReactJS",
-        color:"#5ED4F3",
-        type:"framework"
-    },
-    {
-        title:"Android Studio",
-        color:"#3DDC84",
-        type:"framework"
-    },
-    {
-        title:"Cloud Simulator",
-        color:"#F7DF1E",
-        type:"framework"
-    },
-    {
-        title:"OpenGL",
-        color:"#a9b9cf",
-        type:"framework"
-    },
-    {
-        title:"Tensorflow",
-        color:"#f77a11",
-        type:"framework"
-    },
-    {
-        title:"Scikit-Learn",
-        color:"#319ad0",
-        type:"framework"
-    },
-    {
-        title:"AngularJS",
-        color:"#DD0031",
-        type:"framework"
-    },
-    {
-        title:"Python",
-        color:"#FCD12B",
-        type:"language"
-    },
-    {
-        title:"NodeJS",
-        color:"#539E43",
-        type:"framework"
-    },
-    {
-        title:"ExpressJS",
-        color:"#353535",
-        type:"framework"
-    },
-    {
-        title:"GraphQL",
-        color:"#E10098",
-        type:"library"
-    },
-    {
-        title:"Prisma",
-        color:"#0C344B",
-        type:"library"
-    },
-    {
-        title:"PHP",
-        color:"#8892BF",
-        type:"language"
-    },
-    {
-        title:"CSS",
-        color:"#1172B8",
-        type:"language"
-    },
-    {
-        title:"Java",
-        color:"#E76F00",
-        type:"language"
-    },
-    {
-        title:"C/C++",
-        color:"#005697",
-        type:"language"
-    },
-    {
-        title:"HTML",
-        color:"#F16529",
-        type:"language"
-    },
-    {
-        title:"Javascript",
-        color:"#F7DF1E",
-        type:"language"
-    },
-    {
-        title:"Bootstrap",
-        color:"#7532FA",
-        type:"library"
-    },
-    {
-        title:"JQuery",
-        color:"#78CFF5",
-        type:"library"
-    },
-    {
-        title:"MongoDB",
-        color:"#58AA50",
-        type:"database"
-    },
-    {
-        title:"SQL",
-        color:"#000000",
-        type:"database"
-    },
-    {
-        title:"Vercel",
-        color:"#000000",
-        type:"tools"
-    },
-    {
-        title:"Heroku",
-        color:"#430098",
-        type:"tools"
-    },
-    {
-        title:"Netlify",
-        color:"#4d9abf",
-        type:"tools"
-    },
-    {
-        title:"Git/Github",
-        color:"#09244b",
-        type:"tools"
-    },
-    {
-        title:"Firebase",
-        color:"#fcca3f",
-        type:"tools"
-    },
-    {
-        title:"TailwindCSS",
-        color:"#15b8c5",
-        type:"library"
-    }
+const Skills = [
+    // Languages
+    { title: "Java", type: "language" },
+    { title: "Python", type: "language" },
+    { title: "TypeScript", type: "language" },
+    { title: "Kotlin", type: "language" },
+    { title: "JavaScript", type: "language" },
+    { title: "SQL", type: "language" },
+
+    // Frameworks
+    { title: "Spring Boot", type: "framework" },
+    { title: "Node.js", type: "framework" },
+    { title: "Express.js", type: "framework" },
+    { title: "PySpark", type: "framework" },
+    { title: "Apache Airflow", type: "framework" },
+    { title: "React.js", type: "framework" },
+    { title: "GraphQL", type: "library" },
+
+    // Infra & data
+    { title: "AWS", type: "tools" },
+    { title: "Docker", type: "tools" },
+    { title: "Kubernetes", type: "tools" },
+    { title: "Terraform", type: "tools" },
+    { title: "Databricks", type: "tools" },
+    { title: "Elasticsearch", type: "tools" },
+    { title: "PostgreSQL", type: "database" },
+    { title: "MongoDB", type: "database" }
 ]
 
 export default Skills;

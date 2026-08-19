@@ -2,35 +2,31 @@ import React from 'react';
 import SkillsData from '../Data/SkillsData';
 import '../css/Skills.css';
 
+const GROUPS = [
+  { key: 'languages', label: 'languages', match: (t) => t === 'language' },
+  { key: 'frameworks', label: 'frameworks', match: (t) => t === 'framework' || t === 'library' },
+  { key: 'infra', label: 'infra & data', match: (t) => t === 'tools' || t === 'database' },
+];
+
 function Skills() {
-  const categories = {
-    languages: SkillsData.filter(skill => skill.type === "language"),
-    frameworks: SkillsData.filter(skill => skill.type === "framework" || skill.type === "library"),
-    tools: SkillsData.filter(skill => skill.type === "tools" || skill.type === "database")
-  };
-
   return (
-    <div data-aos="fade-left" data-aos-duration="600" data-aos-offset="80" className='skills'>
-      <h3 className='skills_title'>Languages</h3>
-      <div className="skills_list">
-        {categories.languages.map((skill, index) => (
-          <li key={index} className='each_skill'>{skill.title}</li>
-        ))}
-      </div>
-
-      <h3 className='skills_title'>Frameworks and Libraries</h3>
-      <div className="skills_list">
-        {categories.frameworks.map((skill, index) => (
-          <li key={index} className='each_skill'>{skill.title}</li>
-        ))}
-      </div>
-
-      <h3 className='skills_title'>Tools & Databases</h3>
-      <div className="skills_list">
-        {categories.tools.map((skill, index) => (
-          <li key={index} className='each_skill'>{skill.title}</li>
-        ))}
-      </div>
+    <div className="manifest" data-aos="fade-up" data-aos-duration="500" data-aos-offset="60">
+      {GROUPS.map((group) => {
+        const items = SkillsData.filter((s) => group.match(s.type));
+        return (
+          <div className="manifest-col" key={group.key}>
+            <div className="manifest-head">
+              <span className="manifest-label">{group.label}</span>
+              <span className="manifest-count">{items.length}</span>
+            </div>
+            <ul className="manifest-list">
+              {items.map((s, i) => (
+                <li key={i}>{s.title}</li>
+              ))}
+            </ul>
+          </div>
+        );
+      })}
     </div>
   );
 }

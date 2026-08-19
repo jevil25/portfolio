@@ -1,89 +1,93 @@
 import React from 'react';
 import '../css/Header.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-const logoImage = require("../Images/loader.png")
+const RESUME_URL = "https://drive.google.com/file/d/1xxeBBevoK6g_9ZYbC3UwbteRBFW9unWU/view";
+
+function ThemeToggle() {
+    const [theme, setTheme] = useState(
+        () => document.documentElement.getAttribute('data-theme') || 'light'
+    );
+
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+    }, [theme]);
+
+    const toggle = () => {
+        const next = theme === 'dark' ? 'light' : 'dark';
+        setTheme(next);
+        try { localStorage.setItem('theme', next); } catch (e) { /* ignore */ }
+    };
+
+    return (
+        <button
+            className="theme-toggle"
+            onClick={toggle}
+            aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+            title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
+        >
+            <i className={theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon'} aria-hidden="true"></i>
+        </button>
+    );
+}
+
+const NAV = [
+    { href: '#Experience', label: 'experience' },
+    { href: '#Projects', label: 'projects' },
+    { href: '#Education', label: 'education' },
+    { href: '#Skills', label: 'skills' },
+    { href: '#Contact', label: 'contact' },
+];
 
 function Header(){
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => {
-        setIsOpen(!isOpen);
-    }
+    return (
+    <header className="header">
+        <div className="nav-inner">
+            <a href="#top" className="wordmark">
+                <span className="wordmark-tag">[AN]</span>
+                <span className="wordmark-name">aaron nazareth</span>
+            </a>
 
-    return (<>
-    <div className="header">
-        <div className="navbar-container">
-            <div className="navbar-content">
-                {/* Logo and Name */}
-                <div className="logo-section" data-aos="fade-right" data-aos-duration="600" data-aos-offset="0">
-                    <img src={logoImage} alt="Logo" className="logo" />
-                    <span className="name">Aaron Nazareth</span>
-                </div>
+            <nav className="nav-links" aria-label="Primary">
+                {NAV.map((item, i) => (
+                    <a key={item.href} href={item.href}>
+                        <span className="nav-index">{String(i + 1).padStart(2, '0')}</span>
+                        {item.label}
+                    </a>
+                ))}
+            </nav>
 
-                {/* Desktop Navigation */}
-                <nav className="nav-links">
-                    <a href="#Description">About</a>
-                    <a href="#Experience">Experience</a>
-                    <a href="#Projects">Projects</a>
-                    <a href="#Education">Education</a>
-                    <a href="#Skills">Skills</a>
-                    <a href="#Contact">Contact</a>
-                </nav>
-
-                {/* Social Links and Resume */}
-                <div className="header-actions" data-aos="fade-left" data-aos-duration="600" data-aos-offset="0">
-                    <div className="social-icons">
-                        <a href="https://www.linkedin.com/in/aaron-nazareth-6580311b6/" className="social-icon" title="LinkedIn">
-                            <i className="fa-brands fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/jevil25" className="social-icon" title="GitHub">
-                            <i className="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://www.instagram.com/aaron_naz25/" className="social-icon" title="Instagram">
-                            <i className="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="mailto:jevil257@gmail.com" className="social-icon" title="Email">
-                            <i className="fa-solid fa-envelope"></i>
-                        </a>
-                    </div>
-                    <a href="https://drive.google.com/file/d/1uAZPGKKXcEjLqoFeKszPdDP2M1EDa63O/view?usp=sharing" className="resume-btn">Resume</a>
-                </div>
-
-                {/* Mobile Menu Button */}
-                <button className="mobile-toggle" onClick={toggle}>
-                    <i className="fas fa-bars"></i>
-                </button>
+            <div className="nav-actions">
+                <ThemeToggle />
+                <a href={RESUME_URL} className="resume-btn" target="_blank" rel="noopener noreferrer">résumé →</a>
             </div>
 
-            {/* Mobile Navigation */}
-            {isOpen && (
-                <nav className="mobile-nav">
-                    <a href="#Description" onClick={() => setIsOpen(false)}>About</a>
-                    <a href="#Experience" onClick={() => setIsOpen(false)}>Experience</a>
-                    <a href="#Projects" onClick={() => setIsOpen(false)}>Projects</a>
-                    <a href="#Education" onClick={() => setIsOpen(false)}>Education</a>
-                    <a href="#Skills" onClick={() => setIsOpen(false)}>Skills</a>
-                    <a href="#Contact" onClick={() => setIsOpen(false)}>Contact</a>
-                    <div className="mobile-socials">
-                        <a href="https://www.linkedin.com/in/aaron-nazareth-6580311b6/">
-                            <i className="fa-brands fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/jevil25">
-                            <i className="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://www.instagram.com/aaron_naz25/">
-                            <i className="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="mailto:jevil257@gmail.com">
-                            <i className="fa-solid fa-envelope"></i>
-                        </a>
-                    </div>
-                </nav>
-            )}
+            <button
+                className="mobile-toggle"
+                onClick={() => setIsOpen(!isOpen)}
+                aria-expanded={isOpen}
+                aria-label="Toggle menu"
+            >
+                {isOpen ? '✕' : '☰'}
+            </button>
         </div>
-    </div>
-    </>
+
+        {isOpen && (
+            <nav className="mobile-nav" aria-label="Mobile">
+                {NAV.map((item, i) => (
+                    <a key={item.href} href={item.href} onClick={() => setIsOpen(false)}>
+                        <span className="nav-index">{String(i + 1).padStart(2, '0')}</span>
+                        {item.label}
+                    </a>
+                ))}
+                <a href={RESUME_URL} onClick={() => setIsOpen(false)} target="_blank" rel="noopener noreferrer">
+                    <span className="nav-index">↗</span>résumé
+                </a>
+            </nav>
+        )}
+    </header>
   )
 }
 

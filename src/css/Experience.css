@@ -1,135 +1,95 @@
-.experience {
-    padding: 2.5rem;
-    margin: 2.5rem auto;
-    max-width: 1000px;
-    border-radius: 16px;
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.3) 100%);
-    border: 1px solid rgba(148, 163, 184, 0.1);
-    backdrop-filter: blur(15px);
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+.exp-row {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: var(--s6) var(--s5);
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: var(--s4);
+    border-bottom: 1px solid var(--hairline);
 }
 
-.experience:hover {
-    transform: translateY(-6px);
-    border-color: rgba(96, 165, 250, 0.2);
-    box-shadow: 0 12px 40px rgba(96, 165, 250, 0.15);
+.exp-marker {
+    padding-top: 4px;
 }
 
-.experienceHeading h3 {
-    font-size: 1.75rem;
+.exp-index {
+    font-family: var(--mono);
+    font-size: 0.85rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #93c5fd, #49b792);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.exp-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--s4);
+    flex-wrap: wrap;
+}
+
+.exp-company {
+    font-family: var(--mono);
+    font-size: 1.3rem;
+    font-weight: 700;
     letter-spacing: -0.5px;
-}
-
-.expdescription h4 {
+    color: var(--ink);
     margin: 0;
-    margin-bottom: 0.75rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #e2e8f0;
 }
 
-.expdescription h5 {
-    color: #94a3b8;
-    font-size: 1rem;
-    margin: 0.75rem 0;
-    font-weight: 500;
+.exp-duration {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--muted);
+    white-space: nowrap;
 }
 
-.expdescription p {
-    color: #cbd5e1;
-    line-height: 1.8;
-    white-space: pre-line;
-    margin: 1.25rem 0;
-    font-weight: 400;
-}
-
-.certification {
-    margin-top: 1.5rem;
-    padding: 1.25rem;
-    background: rgba(96, 165, 250, 0.08);
-    border-left: 3px solid #49b792;
-    border-radius: 8px;
-}
-
-.certification pre {
-    margin: 0;
-    font-family: inherit;
-}
-
-.certification a {
-    text-decoration: none;
-    color: #60a5fa;
-    transition: all 0.3s ease;
-    position: relative;
+.exp-role {
+    font-family: var(--sans);
+    font-size: 0.95rem;
     font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
+    color: var(--accent);
+    margin: var(--s2) 0 var(--s4);
 }
 
-.certification a:hover {
-    color: #49b792;
+.exp-desc {
+    font-family: var(--sans);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--ink);
+    white-space: pre-line;
+    margin: 0;
+    max-width: 68ch;
 }
 
-.certification a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background: linear-gradient(to right, #60a5fa, #49b792);
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease;
+.exp-cert {
+    display: inline-block;
+    margin-top: var(--s4);
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
 }
 
-.certification a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+.exp-cert:hover {
+    border-bottom-color: var(--accent);
 }
 
-@media screen and (max-width: 768px) {
-    .experience {
-        padding: 2rem;
-        margin: 2rem 1.5rem;
-    }
-    
-    .experienceHeading h3 {
-        font-size: 1.5rem;
-    }
-    
-    .expdescription h4 {
-        font-size: 1.25rem;
-    }
-
-    .certification {
-        padding: 1rem;
-    }
+.exp-cert:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+    border-radius: var(--radius);
 }
 
-@media screen and (max-width: 500px) {
-    .experience {
-        padding: 1.5rem;
-        margin: 1.5rem 1rem;
+@media (max-width: 600px) {
+    .exp-row {
+        grid-template-columns: 32px 1fr;
+        gap: var(--s3);
+        padding: var(--s5) var(--s4);
     }
 
-    .experienceHeading h3 {
-        font-size: 1.25rem;
-    }
-    
-    .expdescription h4 {
+    .exp-company {
         font-size: 1.1rem;
-    }
-
-    .expdescription p {
-        font-size: 0.95rem;
     }
 }

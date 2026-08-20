@@ -8,7 +8,7 @@ const experience = [
 
 Key Achievements:
 • Built internal AI test-authoring tooling adopted by 30+ engineers — an AI layer over Gauge that generates natural-language test cases without writing step definitions, cutting authoring from 10 hours to 2 hours per module
-• Owned a rebuild of the split-order shipment notification flow, replacing confusing multi-tracking-link messages with a single consolidated order view across all sub-shipments and tracking IDs [add impact metric: tickets deflected / messages per day]`,
+• Owned a rebuild of the split-order shipment notification flow, replacing confusing multi-tracking-link messages with a single consolidated order view across all sub-shipments and tracking IDs`,
         certificate: ""
     },
     {
